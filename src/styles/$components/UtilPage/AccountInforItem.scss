@@ -1,0 +1,31 @@
+.AccountInforItem{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+    padding-bottom: rem(39);
+    border-bottom: rem(1) solid $color-grey-7;
+    margin-bottom: rem(39);
+    @include fontSize12();
+}
+.AccountInforItem-option{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.AccountInforItem-option .infor-tag{
+    text-transform: uppercase;
+    color: $color-black-1;
+}
+.AccountInforItem-option .infor-value{
+    color: $color-grey-15;
+}
+.AccountInforItem-option  a{
+    text-decoration: none;
+    color: $color-yellow-8 ;
+    &:hover{
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,37 @@
+.AlertAdd{
+    width: 100%;
+    background-color: $color-grey-14;
+    padding: 3% 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:$font-Dmsans;
+    font-size: rem(12);
+    line-height: rem(20);
+    position: fixed;
+    z-index: 2;
+    bottom: 0;
+    @include mq($BREAKPOINT-LG) {
+        font-size: rem(20);
+        line-height: rem(27);
+        padding: 1% 5%;
+    }
+}
+.AlertAdd-state{
+    display: flex;
+    align-items: center;
+    width: 60%;
+}
+.AlertAdd-state img{
+    width: rem(16);
+    height: rem(16);
+    margin-right: rem(8);
+    @include mq($BREAKPOINT-LG) {
+        width: rem(20);
+        height: rem(20);
+    }
+}
+.AlertAdd-link{
+    text-decoration: none;
+    color: $color-yellow-8;
+}

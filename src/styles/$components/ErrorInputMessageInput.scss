@@ -1,0 +1,9 @@
+.errorInputMessageInput {
+  position: absolute;
+  color: $color-red-1;
+  bottom: 10%;
+  left: 0;
+  @include mq($BREAKPOINT-LG) {
+    bottom: 20%;
+  }
+}

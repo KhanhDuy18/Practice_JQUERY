@@ -1,0 +1,100 @@
+mixin ProductSection(checkMenu,checkBanner="yes")
+    <div class="productSection">
+        if checkMenu =="no"
+            <div class="productSection-mnenuAndBanner">
+                <div class="productSection-banner" data-slider-swiper>
+                    <div class="productSection-banner-img" data-slider-wrapper>
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                    </div>
+                    <ul class="productSection-banner-dots" data-dots-wrapper>
+                        <li class="productSection-banne-dot "></li>
+                        <li class="productSection-banne-dot dotActive"></li>
+                        <li class="productSection-banne-dot"></li>
+                        <li class="productSection-banne-dot"></li>
+                        <li class="productSection-banne-dot"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="productSection-listProducts">
+                <div class="productSection-listProducts-title">
+                    <p>Shop The Latest</p>
+                    <a href="#">View all</a>
+                </div>
+                <div class="productSection-listProducts-list">
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                    +CardProduct({'productId': 'id002','productName': 'Product2','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                    +CardProduct({'productId': 'id003','productName': 'Product3','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                    +CardProduct({'productId': 'id004','productName': 'Product4','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                    +CardProduct({'productId': 'id005','productName': 'Product5','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                    +CardProduct({'productId': 'id006','productName': 'Product6','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                </div>
+            </div>
+        else if checkBanner =='no'
+                <div class="productSection-mnenuAndBanner">
+                    <div class="productSection-menu">
+                        +MenuOption("Earring")
+                        +MenuOption("Necklace")
+                        +MenuOption("bracelet")
+                        +MenuOption("bracelet")
+                        +MenuOption("bracelet")
+                        +MenuOption("bracelet")
+                        +MenuOption("bracelet")
+                    </div>
+                </div>
+                <div class="productSection-listProducts">
+                    <div class="productSection-listProducts-list">
+                        +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                        +CardProduct({'productId': 'id002','productName': 'Product2','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                        +CardProduct({'productId': 'id003','productName': 'Product3','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                        +CardProduct({'productId': 'id004','productName': 'Product4','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                        +CardProduct({'productId': 'id005','productName': 'Product5','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                        +CardProduct({'productId': 'id006','productName': 'Product6','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                </div>
+        else if checkBanner='yes'
+            <div class="productSection-mnenuAndBanner">
+                <div class="productSection-menu">
+                    +MenuOption("Earring")
+                    +MenuOption("Necklace")
+                    +MenuOption("bracelet")
+                    +MenuOption("bracelet")
+                    +MenuOption("bracelet")
+                    +MenuOption("bracelet")
+                </div>
+                <div class="productSection-banner"  data-slider-slick>
+                    <div class="productSection-banner-img" data-slider-wrapper>
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                        +BannerProduct("images/productBannerHei.png","images/productBannerLg.png","Gold big hoops", 6800)
+                    </div>
+                    <ul class="productSection-banner-dots" data-dots-wrapper>
+                        <li class="productSection-banne-dot dotActive"></li>
+                        <li class="productSection-banne-dot "></li>
+                        <li class="productSection-banne-dot "></li>
+                        <li class="productSection-banne-dot"></li>
+                        <li class="productSection-banne-dot"></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="productSection-listProducts">
+                <div class="productSection-listProducts-title">
+                    <p>Shop The Latest</p>
+                    <a href="#">View all</a>
+                </div>
+                <div class="productSection-listProducts-list">
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProductHorizional("images/productHSmall.png","Hal Earrings",23.00,"Earring")
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProductHorizional("images/productHSmall.png","Hal Earrings",23.00,"Earring")
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                </div>
+            </div>
+    </div>

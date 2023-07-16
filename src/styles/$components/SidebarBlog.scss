@@ -1,0 +1,56 @@
+.SidebarBlog-search {
+    position: relative;
+    display: none;
+    margin-bottom: rem(62);
+    @include mq($BREAKPOINT-SM) {
+      display: block;
+    }
+  }
+  .SidebarBlog-search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-bottom: rem(1) solid $color-grey-7;
+    padding: rem(8) 0;
+  }
+  .SidebarBlog-search input::placeholder {
+    color: $color-grey-15;
+    @include fontSize14();
+    @include mq($BREAKPOINT-LG) {
+      @include fontSize16();
+    }
+  }
+  .SidebarBlog-search img {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .SidebarBlog-title {
+    @include fontSize16();
+    margin-bottom: rem(20);
+    @include mq($BREAKPOINT-LG) {
+      @include fontSize20();
+    }
+  }
+  .SidebarBlog-list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+  .SidebarBlog-list li{
+    @include mq($BREAKPOINT-LG) {
+      margin-bottom: rem(10);
+    }
+  }
+  .SidebarBlog-list a {
+    text-decoration: none;
+    color: $color-grey-15;
+    @include fontSize12();
+    @include mq($BREAKPOINT-LG) {
+      @include fontSize16();
+    }
+  }
+  .SidebarBlog-list a:hover {
+    color: $color-black-1;
+  }

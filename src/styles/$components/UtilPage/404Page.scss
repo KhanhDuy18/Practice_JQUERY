@@ -1,0 +1,84 @@
+.e404Page-container {
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include mq($BREAKPOINT-SM) {
+    height: 45%;
+  }
+}
+.e404Page-content {
+  width: 100%;
+  background-color: $color-white-1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  @include mq($BREAKPOINT-SM) {
+    position: relative;
+  }
+}
+.e404Page-title {
+  @include fontSize20();
+  font-weight: 500;
+  margin-bottom: rem(10);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(24);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(30);
+    line-height: rem(43);
+    margin-bottom: rem(24);
+  }
+}
+.e404Page-desc {
+  @include fontSize12();
+  color: $color-grey-15;
+  text-align: center;
+  margin-bottom: rem(24);
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize16();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize20();
+    margin-bottom: rem(64);
+  }
+}
+.e404Page-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(115);
+  height: rem(32);
+  background-color: $color-white-1;
+  border: rem(1) solid $color-black-1;
+  border-radius: rem(4);
+  @include fontSize12();
+  text-decoration: none;
+  color: $color-black-1;
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize16();
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 700;
+    width: rem(187);
+    height: rem(53);
+    @include fontSize20();
+  }
+}
+.header-top {
+  @include mq($BREAKPOINT-SM, max) {
+    grid-template-columns: auto;
+    place-items: center;
+  }
+}
+.header-right {
+  @include mq($BREAKPOINT-SM, max) {
+    display: none;
+  }
+}
+footer{
+  @include mq($BREAKPOINT-SM,max) {
+    display: none;
+  }
+}

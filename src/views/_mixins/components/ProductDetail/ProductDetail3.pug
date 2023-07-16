@@ -1,0 +1,194 @@
+mixin ProductDetail3(product,listSimilarItem)
+    <div class="ProductDetail">
+        <div class="ProductDetail-item">
+            <div class="ProductDetail-item-img">
+                    <div class="ProductDetail-item-listImg">
+                        +img(`${product.img}`, `${product.name}`)
+                        +img(`${product.img}`, `${product.name}`)
+                        +img(`${product.img}`, `${product.name}`)
+                        +img(`${product.img}`, `${product.name}`)
+                    </div>
+                    <div class="ProductDetail-item-imgMain">
+                        +img("/images/imgProductDetail.png", `${product.name}`)
+                        +img("/images/imgProductDetail.png", `${product.name}`)
+                        +img("/images/imgProductDetail.png", `${product.name}`)
+                        +img("/images/imgProductDetail.png", `${product.name}`)
+                        +img("/images/imgProductDetail.png", `${product.name}`)
+                    </div>
+            </div>
+            <div class="ProductDetail-item-fullInfor">
+                    <div class="ProductDetail-item-infor">
+                        if product.state 
+                            <h1 class="item-infor-name">!{product.name}</h1>
+                            <div class="item-infor-price">
+                                <span class="oldPrice">$ !{product.price}</span>
+                                <span class="newPrice">$ !{product.price*state}</span>
+                            </div>
+                            <a href="#" class="shareBtn"> 
+                                +img("images/share.png", "Share")
+                            </a>
+                        else
+                            <h1 class="item-infor-name">!{product.name}</h1>
+                            <p class="item-infor-price">$ !{product.price}</p>
+                            <a href="#" class="shareBtn"> 
+                                +img("images/share.png", "Share")
+                            </a>
+                    </div>
+                    <div class="ProductDetail-item-starAndReview">
+                        <div class="productStar">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                        </div>
+                        <p class="productReview">
+                            if product.reviews
+                                if product.reviews.length < 1
+                                    <span>!{product.reviews.length} customer review</span>
+                                else 
+                                    <span>!{product.reviews.length} customer reviews</span>
+                        </p>
+                    </div>
+                    <div class="ProductDetail-item-btnAdd">
+                        <div class="btnAdd-input">
+                            <span> - </span>
+                            <input type="number" value="1" min="0">
+                            <span> + </span>
+                        </div>
+                        <a href="#">ADD TO CART</a>
+                    </div>
+                    <div class="ProductDetail-item-desc">
+                        <p class="content">!{product.desc}</p>
+                        <a href="#">View more 
+                            +img("images/Iconright.png", "Share")
+                        </a>
+                    </div>
+                    <div class="ProductDetail-item-reactAndSocial">
+                        <div class="reactAndSocial-react">
+                            <span class="fa fa-heart-o"></span>
+                        </div>
+                        <ul class="reactAndSocial-social">
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/Mail.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/Face.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/IgBig.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/TwitterBig.png", "Mail")
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ProductDetail-item-QuantityAndType">
+                        <span>SKU: <span>!{product.Quantity}</span></span>
+                        <span>Categories: <span>!{product.type}</span></span>
+                    </div>
+            </div>
+        </div>
+        <div class="ProductDetail-moreInfor">
+            <div class="ProductDetail-moreInfor-menu">
+                <div id="ProductDetail-moreInfor-descTitle" class="ProductDetail-moreInfor-item ">
+                    <h3>Description</h3>
+                    +img("images/IconDown.png", "Expand")
+                </div>
+                <div id="ProductDetail-moreInfor-add" class="ProductDetail-moreInfor-item ">
+                    <h3>Additional information</h3>
+                    +img("images/IconDown.png", "Expand")
+                </div>
+                <div id="ProductDetail-moreInfor-reiew" class="ProductDetail-moreInfor-item active">
+                    <h3>Reviews(!{product.reviews.length})</h3>
+                    +img("images/IconDown.png", "Expand")
+                </div>
+            </div>
+            <div class="ProductDetail-moreInfor-content">
+                <div class="ProductDetail-moreInfor-itemContent descContent ">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.</p>
+                </div>
+                <div class="ProductDetail-moreInfor-itemContent addContent ">
+                    <span>Weight: <span>0.3 kg</span></span>
+                    <span>Dimentions: <span>15 x 10 x 1 cm</span></span>
+                    <span>Colours: <span>Black, Browns, White</span></span>
+                    <span>Material: <span>Metal</span></span>
+                </div>
+                <div class="ProductDetail-moreInfor-itemContent review activeTab">
+                    <div class="reviewList">
+                        if product.reviews    
+                            <p class="reviewList-number">
+                                if product.reviews.length < 1
+                                    <span>!{product.reviews.length} Review for !{product.name}</span>
+                                else 
+                                    <span>!{product.reviews.length} Reviews for !{product.name}</span>
+                            </p>
+                            <div class="reviewList-list">
+                                each review in product.reviews 
+                                    +ProductReview(review)
+                            </div>
+                    </div>
+                    <form class="reviewForm">
+                        <p class="reviewForm-title">Add a Review</p>
+                        <p class="reviewForm-notice">Your email address will not be published. Required fields are marked *</p>
+                        <div class="reviewForm-content">
+                            <label for="content">Your Review*</label>
+                            <input type="text" id="content">
+                        </div>
+                        <div class="reviewForm-name">
+                            <input type="text" id="name" placeholder="Enter your name*">
+                        </div>
+                        <div class="reviewForm-email">
+                            <input type="text" id="email" placeholder="Enter your email*">
+                        </div>
+                        <div class="reviewForm-saving">
+                            <input type="checkbox" id="saving">
+                            <label for="saving">Save my name, email, and website in this browser for the next time I comment</label>
+                        </div>
+                        <div class="reviewForm-rating">
+                            <label class="stars-item">
+                                <input type="radio" name="star-rating" value="1" />
+                            </label>
+                            <label class="stars-item">
+                                <input type="radio" name="star-rating" value="2" />
+                            </label>
+                            <label class="stars-item">
+                                <input type="radio" name="star-rating" value="3" />
+                            </label>
+                            <label class="stars-item">
+                                <input type="radio" name="star-rating" value="4" />
+                            </label>
+                            <label class="stars-item">
+                                <input type="radio" name="star-rating" value="5" />
+                            </label>
+                        </div>
+                        <button type="submit">Submit</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-similarItems">
+            if listSimilarItem
+                <h2 class="similarItems-title">Similar Items</h2>
+                <div class="similarItems-title-list">
+                    each Item in listSimilarItem
+                        +CardProduct(`${listSimilarItem.img}`,`${listSimilarItem.name}`,`${listSimilarItem.price}`)
+                </div>
+            else 
+                <h2 class="similarItems-title">Similar Items</h2>
+                <div class="similarItems-list">
+                    +CardProduct("images/productSmall1.png","Lira Earrings",2000)
+                    +CardProduct("images/productSmall2.png","Lira Earrings",20000,0.21)
+                    +CardProduct("images/productSmall1.png","Lira Earrings",2000,"Sold out")
+                </div>
+        </div>
+    </div>

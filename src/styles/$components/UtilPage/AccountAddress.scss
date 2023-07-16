@@ -1,0 +1,72 @@
+
+.AccountAddress-desc{
+    @include fontSize12();
+    margin-bottom: rem(24);
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize14();
+        margin-bottom: rem(35);
+    }
+    @include mq($BREAKPOINT-LG) {
+        @include fontSize16();
+        margin-bottom: rem(45);
+    }
+}
+.AccountAddress-main{
+    display: flex;
+    flex-direction: column;
+    gap: rem(48);
+    @include mq($BREAKPOINT-SM) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.AccountAddress-Address{
+    display: flex;
+    flex-direction: column;
+    gap:rem(16);
+    @include mq($BREAKPOINT-SM) {
+        width: 46%;
+    }
+}
+.AccountAddress-Address-title,
+.AccountAddress-Address-button{
+    @include fontSize16();
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize20();
+    }
+}
+.AccountAddress-Address-button{
+    width: fit-content;
+    padding: 0;
+    border: none;
+    background:none;
+    outline: none;
+    font-weight: 700;
+    color: $color-yellow-8;
+    cursor: pointer;
+    &:hover{
+        color: $color-green-4;
+    }
+}
+.AccountAddress-Address-desc{
+    @include fontSize12();
+    color: $color-grey-15;
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize14();     
+    }
+    @include mq($BREAKPOINT-LG) {
+        @include fontSize16();
+    }
+}
+.AccountAddress-Address .AddAddressForm{
+    display: none;
+}
+.AccountAddress-Address.addForm{
+    .AccountAddress-Address-button,
+    .AccountAddress-Address-desc{
+        display: none;
+    }
+    .AddAddressForm{
+        display: block;
+    }
+} 

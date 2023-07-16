@@ -1,0 +1,8 @@
+extends _layouts/404PageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "404";
+  
+block container
+  include $components/UtilsPage/404Page

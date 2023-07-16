@@ -1,0 +1,22 @@
+@import "_utils/index";
+
+// components
+@import "$components/common";
+@import "$components/header";
+@import "$components/footer";
+@import "$components/home";
+@import "$components/Form/commonFormStyle";
+@import "$components/UtilPage/commonUtilPageStyle";
+@import "$components/UtilPage/AccountNoItem";
+@import "$components/UtilPage/AccountInforItem";
+@import "$components/UtilPage/AccountMenu";
+@import "$components/UtilPage/AccountTableItem";
+@import "$components/Form/AddAddressForm";
+@import "$components/Form/AccountDetailForm";
+@import "$components/UtilPage//AccountTabList";
+@import "$components/UtilPage/AccountDashBoard";
+@import "$components/UtilPage/AccountAddress";
+@import "$components/UtilPage/AccountDetail";
+@import "$components/UtilPage/AccountPage";
+@import "$components/UtilPage/ViewOrder";
+@import "$components/UtilPage/AccountAlert";

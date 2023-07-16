@@ -1,0 +1,50 @@
+mixin AccountMenu(tab="Dashboard")
+    <div class="AccountMenu">
+        +img("images/PreIcon.png","Pre")
+        if tab=="Dashboard"
+            <div class="AccountMenu-list">
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">Orders</a>
+                <a href="#">Downloads</a>
+                <a href="#">Addresses</a>
+                <a href="#"><span>Account</span><span>details</span></a>
+                <a href="#">Logout</a>
+            </div>
+        if tab=="Order"
+            <div class="AccountMenu-list">
+                <a href="#" >Dashboard</a>
+                <a href="#" class="active">Orders</a>
+                <a href="#">Downloads</a>
+                <a href="#">Addresses</a>
+                <a href="#"><span>Account</span><span>details</span></a>
+                <a href="#">Logout</a>
+            </div>
+        if tab=="Download"
+            <div class="AccountMenu-list">
+                <a href="#">Dashboard</a>
+                <a href="#">Orders</a>
+                <a href="#" class="active">Downloads</a>
+                <a href="#">Addresses</a>
+                <a href="#"><span>Account</span><span>details</span></a>
+                <a href="#">Logout</a>
+            </div>
+        if tab=="Address"
+            <div class="AccountMenu-list">
+                <a href="#">Dashboard</a>
+                <a href="#">Orders</a>
+                <a href="#">Downloads</a>
+                <a href="#" class="active">Addresses</a>
+                <a href="#"><span>Account</span><span>details</span></a>
+                <a href="#">Logout</a>
+            </div>
+        if tab=="Detail"
+            <div class="AccountMenu-list">
+                <a href="#">Dashboard</a>
+                <a href="#">Orders</a>
+                <a href="#">Downloads</a>
+                <a href="#">Addresses</a>
+                <a href="#" class="active"><span>Account</span><span>details</span></a>
+                <a href="#">Logout</a>
+            </div>
+        +img("images/NextIcon.png","Next")
+    </div>

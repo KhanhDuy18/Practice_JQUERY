@@ -1,0 +1,104 @@
+mixin CheckoutForm(listProduct)
+    <form class="checkoutForm" data-select-province >
+        <div class="checkoutForm-left" data-checkout-information-form>
+            <div class="inforForm">
+                <h4 class="inforForm-title">Billing Details</h4>
+                <div class="inforForm-fullName">
+                    <div class='inforForm-input'>
+                        <input class='required inputField' name="firstName" id="FirstName" type="text" placeholder="FirstName" required/>
+                        <label for="FirstName">First name</label>
+                    </div>
+                    <div class='inforForm-input'>
+                        <input class='required inputField' name="lastName" id="LastName" type="text" placeholder="LastName" required/>
+                        <label for="LastName">Last name</label>
+                    </div>
+                </div>
+                <div class='inforForm-input'>
+                    <input class='required inputField' name="companyName" id='CompanyName' type="text" required placeholder="CompanyName"/>
+                    <label for="CompanyName">Company name</label>
+                </div>
+                <div class="inforForm-select">
+                    <select name="city" class='required' data-city-select>
+                        <option value="">City</option>
+                    </select>
+                </div>
+                <div class="inforForm-select">
+                    <select name="district" class='required' data-district-select>
+                        <option value="">District</option>
+                    </select>
+                </div>
+                <div class="inforForm-select">
+                    <select name="address" class='required' data-commune-select>
+                        <option value="">Street Address</option>
+                    </select>
+                </div>
+                <div class='inforForm-input'>
+                    <input class='required inputField' name="phoneNumber" id='Phone' type="text"  placeholder="Phone" required/>
+                    <label for="Phone">Phone</label>
+                </div>
+                <div class='inforForm-input'>
+                    <input class='required inputField' name="email" id='Email' type="mail"  placeholder="Email" required/>
+                    <label for="Email">Email</label>
+                </div>
+                <div class="inforForm-check">
+                    <input id="inforForm-check-account" name="account" type="checkbox"/>
+                    <label for='inforForm-check-account'>Create an account?</label>
+                </div>
+                <div class="inforForm-check">
+                    <input id="inforForm-check-DifferentAddress" name="DifferentAddress" type="checkbox" />
+                    <label for='inforForm-check-DifferentAddress'>Ship to a different address?</label>
+                </div>
+                <div class="inforForm-notes">
+                    <input name="notes" type="text" placeholder="Order notes" value="Order notes"/>
+                </div>
+            </div>
+        </div>      
+        <div class="checkoutForm-right">
+            <h4 class="PaymentForm-title">Your Order</h4>
+            <div class="PaymentForm">
+                <div class="PaymentForm-heading">
+                    <span>PRODUCT</span>
+                    <span>TOTAL</span>
+                </div>
+                <ul class="PaymentForm-content-productList" data-checkout-order-product>
+                </ul>
+                <div class="PaymentForm-content-subTotal">
+                    <span class="content-tag">SUBTOTAL</span>
+                    <span data-checkout-order-sub-price data-format-price></span>
+                </div>
+                <div class="PaymentForm-content-shippingType">
+                    <span class="content-tag">SHIPPING</span>
+                    <span>Free shipping</span>
+                </div>  
+                <div class="PaymentForm-content-total">
+                    <span class="content-tag">TOTAL</span>
+                    <span data-checkout-order-price data-format-price></span>
+                </div>
+                <div class="PaymentForm-content-paymentMethod" data-checkout-payment-type>
+                    <div class="paymentMethod-option">
+                        <input type="radio" id="Check payments" name="paymentMethod" value="Check payments" checked>
+                        <label for="Check payments">Check payments</label>
+                        <p class="paymentMethod-note show">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</p>
+                    </div>
+                    <div class="paymentMethod-option">
+                        <input type="radio" id="Direct bank transfer" name="paymentMethod" value="Direct bank transfer"/>
+                        <label for="Direct bank transfer">Direct bank transfer</label>
+                        <p class="paymentMethod-note">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</p>
+                    </div>
+                    <div class="paymentMethod-option">
+                        <input type="radio" id="Cash on delivery" name="paymentMethod" value="Cash on delivery"/>
+                        <label for="Cash on delivery">Cash on delivery</label>
+                        <p class="paymentMethod-note">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</p>
+                    </div>
+                    <div class="paymentMethod-option">
+                        <input type="radio" id="PayPal " name="paymentMethod" value="PayPal"/>
+                        <label for="PayPal ">PayPal 
+                            +img("images/PayPal.png","PayPal")
+                        </label>
+                        <p class="paymentMethod-note">Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account</p>
+                    </div>
+                </div>
+                <button type="submit" data-place-order-button>PLACE ORDER</button>
+            </div>
+        </div>
+    </form>

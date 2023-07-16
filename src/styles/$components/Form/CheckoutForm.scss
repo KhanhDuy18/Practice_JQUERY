@@ -1,0 +1,277 @@
+.checkoutForm {
+  font-size: rem(12);
+  line-height: rem(20);
+  font-family: $font-Dmsans;
+  @include mq($BREAKPOINT-LG) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.checkoutForm-left,
+.checkoutForm-right{
+  @include mq($BREAKPOINT-LG) {
+    width: 47%;
+  }
+}
+.checkoutForm-left{
+  margin-bottom: rem(37);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: 0;
+  }
+}
+.inforForm .inforForm-title,
+.PaymentForm-title{
+  margin-bottom: rem(24);
+  font-size: rem(16);
+  line-height: rem(27);
+  font-weight: 500;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(20);
+  }
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(26);
+  }
+}
+
+.inforForm input,
+.inforForm select {
+  border: none;
+  outline: none;
+  padding: rem(5) 0;
+  border-bottom: rem(1) solid $color-grey-7;
+  width: 100%;
+  margin-bottom: rem(30);
+  font-size: rem(12);
+  line-height: rem(20);
+  color: $color-grey-15;
+  font-family: $font-Dmsans;
+  cursor: pointer;
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16); 
+    padding: rem(12) 0;
+    margin-bottom: rem(37);
+  }
+}
+.inforForm input[type="mail"] {
+  margin-bottom: rem(37);
+}
+.inforForm input[name="Notes"] {
+  margin: rem(25)  0 0 0; // 25 +12 =37
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(19); 
+  }
+}
+.inforForm .inforForm-input{
+  position: relative;
+  transition: all 10ms ease-in-out;
+  label{
+    position: absolute;
+    left: 0;
+    top: calc(50% - 18px);
+    transform: translateY(-50%);
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-grey-15;
+    transition: all 0.3s ease;
+    @include mq($BREAKPOINT-LG) {
+    font-size: rem(16); 
+    }
+  }
+  &:has(.required) {
+    label::after{
+      content: "  *";
+    }
+  }
+  input{
+    &::placeholder{
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+    &:hover + label,
+    &:focus + label{
+      top: rem(-2);
+    }
+    &:not(:placeholder-shown).inputField{
+      &:not(:hover) + label{
+        top: rem(-2);
+      }
+    }
+  }
+}
+
+.inforForm-fullName{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include mq($BREAKPOINT-LG) {
+    flex-direction: row;
+   }
+}
+.inforForm-fullName .inforForm-input{
+  width: 100%;
+  @include mq($BREAKPOINT-LG) {
+    width: 47%; 
+  }
+}
+.inforForm-fullName input:last-child{
+  display: none;
+  @include mq($BREAKPOINT-LG) {
+   display: block;
+  }
+}
+.inforForm-select {
+  position: relative;
+}
+.inforForm-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: rem(12);
+  font-weight: 600;
+  input {
+    margin: 0;
+    width: fit-content;
+    margin-right: rem(8);
+    cursor: pointer;
+  }
+  label{
+    cursor: pointer;
+  }
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(16); 
+  }
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(18);
+  }
+}
+.PaymentForm {
+  padding: rem(20) rem(16);
+  background-color: $color-grey-14;
+  font-size: rem(12);
+  line-height: rem(20);
+  border-radius: rem(4);
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    border-radius: rem(8);
+    padding: 5% 10%;
+  }
+}
+.PaymentForm-heading,
+.PaymentForm-content-productList li,
+.PaymentForm-content-subTotal,
+.PaymentForm-content-shippingType,
+.PaymentForm-content-total {
+  display: flex;
+  justify-content: space-between;
+}
+.PaymentForm-heading,
+.PaymentForm-content-productList,
+.PaymentForm-content-subTotal,
+.PaymentForm-content-shippingType,
+.PaymentForm-content-total {
+  margin-bottom: rem(24);
+  padding-bottom: rem(20);
+  border-bottom: rem(1) solid $color-grey-7;
+}
+.PaymentForm-content-productList {
+  display: flex;
+  flex-direction: column;
+  gap: rem(44);
+  padding: 0 0 rem(20) 0;
+  margin: 0 0 rem(24) 0;
+  color: $color-grey-15;
+}
+.PaymentForm-content-total{
+  margin-bottom: rem(41);
+  @include mq($BREAKPOINT-LG){
+    margin-bottom: rem(61);
+  }
+}
+.PaymentForm-heading,
+.PaymentForm-content-subTotal span:first-child,
+.PaymentForm-content-shippingType span:first-child,
+.PaymentForm-content-total span {
+  font-weight: 600;
+}
+.PaymentForm-content-subTotal span:last-child,
+.PaymentForm-content-shippingType span:last-child {
+  color: $color-grey-15;
+}
+.PaymentForm-content-paymentMethod{
+  margin-bottom: rem(37);
+  @include mq($BREAKPOINT-LG){
+    margin-bottom: rem(45);
+  }
+}
+.PaymentForm-content-paymentMethod .paymentMethod-option {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  font-weight: 500;
+  margin-bottom: rem(20);
+  &:last-child{
+    margin-bottom: 0;
+  }
+  &:has(.show) {
+    margin-bottom: 0;
+  }
+  input {
+    margin: 0;
+    margin-right: rem(10);
+    cursor: pointer;
+  }
+  label {
+    cursor: pointer;
+  }
+}
+.PaymentForm-content-paymentMethod .paymentMethod-option .paymentMethod-note {
+  display: none;
+  width: 100%;
+  margin-top: rem(13);
+  color: $color-grey-15;
+  font-weight: normal;
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(12);
+    padding-left: rem(20);
+    margin-top: rem(5);
+    margin-bottom: rem(15);
+  }
+}
+.PaymentForm-content-paymentMethod .paymentMethod-option .show {
+  display: block;
+}
+.PaymentForm-content-paymentMethod .paymentMethod-option:last-child img {
+  display: inline;
+}
+.PaymentForm button {
+  cursor: pointer;
+  width: 100%;
+  padding: rem(6) 0;
+  border: rem(1) solid $color-black-1;
+  border-radius: rem(4);
+  background-color: $color-black-1;
+  color: $color-white-1;
+  font-size: rem(12);
+  line-height: rem(20);
+  &:hover{
+    background-color: $color-white-1;
+    color: $color-black-1;
+  }
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(12) 0;
+    font-size: rem(16);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 700;
+    padding: rem(16) 0;
+  }
+}
+.disableButton{
+  pointer-events: none;
+  opacity: 0.5;
+}
+.errorInput{
+  color: $color-red-1;
+}

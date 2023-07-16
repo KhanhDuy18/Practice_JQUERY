@@ -1,0 +1,101 @@
+.CommentCard{
+    width: 100%;
+    @include fontSize12();
+    color: $color-grey-15;
+    padding-bottom: rem(24);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(8);
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize14();
+        justify-content:flex-start;
+      }
+}
+.CommentCard-left{
+    width: 25%;
+    min-width: rem(70);
+    min-height: rem(70);
+    @include mq($BREAKPOINT-SM) {
+        width: rem(70);
+        height: rem(70);
+      }
+}
+ .CommentCard-left img{
+    width: 100%;
+}
+.CommentCard-right{
+    @include mq($BREAKPOINT-SM) {
+        width: 100%;
+    }
+}
+ .CommentCard-right .CommentCard-right-infoUser{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: rem(16);
+    @include mq($BREAKPOINT-SM) {
+        align-items: center;
+    }
+}
+.CommentCard-right-infoUser .top-user{
+    display: flex;
+    flex-direction: column;
+    gap:rem(8);
+    @include mq($BREAKPOINT-SM) {
+        flex-direction: row;
+        align-items: center;
+        gap:rem(16);
+      }
+}
+.CommentCard-right-infoUser .top-user .top-userName{
+    text-decoration: none;
+    color: $color-black-1;
+    font-weight:500;
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize20();
+      }
+    &:hover{
+        color: $color-yellow-8;
+    }
+}
+.CommentCard-right-infoUser .top-button{
+    border: none;
+    outline: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    gap: rem(4);
+    @include fontSize12();
+    color: $color-grey-15;
+    @include mq($BREAKPOINT-SM) {
+        font-size: rem(13);
+        line-height: rem(27);
+      }
+    &:hover{
+        color: $color-yellow-7;
+        cursor: pointer;
+    }
+}
+.CommentCard:has(.CommentCard-rely) .CommentCard-right-commentContent{
+    margin-bottom: rem(24);
+    @include mq($BREAKPOINT-SM) {
+        margin-bottom: rem(32);
+      }
+      @include mq($BREAKPOINT-LG) {
+        margin-bottom: rem(48);
+      }
+}
+.CommentCard-rely .CommentCard-right-commentContent{
+    margin-bottom: 0;
+    @include mq($BREAKPOINT-SM) {
+        @include fontSize16();
+      }
+}
+.CommentCard-rely .CommentCard{
+    padding: 0;
+}

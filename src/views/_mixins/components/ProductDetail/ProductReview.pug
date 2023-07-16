@@ -1,0 +1,12 @@
+mixin ProductReview(review, prefix)
+    <div class="ProductReview">
+        <div class="ProductReview-author">
+            <p>!{review.author}</p>
+            <span>!{review.date}</span>
+        </div>
+        +RatingStar('4', prefix)
+        <div class="ProductReview-content">
+            <p>!{review.content}</p> 
+        </div>
+    </div>
+    

@@ -1,0 +1,51 @@
+.commomFormStyle {
+    margin: 0
+}
+.commomFormStyle input,
+.commomFormStyle select {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: rem(5) 0;
+  margin-bottom: rem(23);
+  border-bottom: rem(1) solid $color-grey-7;
+  @include fontSize12();
+  color: $color-grey-15;
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+  }
+}
+.commomFormStyle input::placeholder,
+.commomFormStyle label {
+  color: $color-grey-15;
+  @include fontSize12();
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+  }
+}
+.commomFormStyle button {
+    border: none;
+    border-radius: rem(4);
+    width: 100%;
+    padding: rem(6) 0;
+    cursor: pointer;
+    @include fontSize12();
+    background-color: $color-black-1;
+    color: $color-white-1;
+    @include mq($BREAKPOINT-SM) {
+      @include fontSize14();
+      padding: rem(8) 0;
+    }
+    @include mq($BREAKPOINT-LG) {
+      font-weight: 700;
+      @include fontSize16();
+      padding: rem(10) 0;
+    }
+  }
+  

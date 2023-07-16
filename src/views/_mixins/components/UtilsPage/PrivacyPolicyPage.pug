@@ -1,0 +1,23 @@
+mixin PrivacyPolicyPage(policy)
+    <div class="PrivacyPolicyPage-cotainer UtilPage-cotainer">
+    <div class="PrivacyPolicyPage UtilPage-content">
+        <h1 class="PrivacyPolicyPage-title UtilPage-content-title">Privacy Policy</h1>
+        if policy.desc
+            <p class="PrivacyPolicyPage-desc">!{policy.desc}</p>
+        if policy.subtitles
+            <div class="PrivacyPolicyPage-subtitles">
+                each subtitle in policy.subtitles
+                    <div class="subtitle">
+                        <h5>!{subtitle.title}</h5>
+                        if subtitle.listContent.length > 0
+                            if subtitle.listContent.length == 1
+                                <p>!{subtitle.listContent[0]}</p>
+                            else
+                                <ul> 
+                                    each content in subtitle.listContent
+                                        <li>!{content}</li>
+                                </ul>    
+                    </div>
+            </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+mixin CheckoutPage(listProduct)
+    <div class="CheckoutPage" data-checkout>
+        <h1 class="Checkout-title">Checkout</h1>
+        <div class="Checkout-link">
+            <p>Returning customer?<a href="#">Click here to login</a></p>
+            <p>Have a coupon?<a href="#">Click here to enter your code</a></p>
+        </div>
+        <form class="couponForm" data-checkout-coupon>
+                <h5 class="couponForm-coupon-desc">If you have a coupon code, please apply it below.</h5>
+                <input type="text" placeholder="Coupon Code" data-checkout-coupon-input/>
+                <button type="submit" data-checkout-coupon-button>APPLY COUPON</button>
+        </form>
+        <div class="Checkout-form">
+            +CheckoutForm(listProduct)
+        </div>
+    </div>

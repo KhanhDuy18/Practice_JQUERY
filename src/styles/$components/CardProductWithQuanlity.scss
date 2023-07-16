@@ -1,0 +1,120 @@
+.CardProductWithQuanlity{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: rem(4);
+    @include mq($BREAKPOINT-SM){
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    }
+    @include mq($BREAKPOINT-LG){
+        max-width: 50%;
+    }
+    @include mq($BREAKPOINT-XL){
+        max-width: 40%;
+    }
+
+}
+.CardProductWithQuanlity-img{
+    width: 50%;
+    min-width: rem(130);
+    margin-right: rem(8);
+    @include mq($BREAKPOINT-SM){
+        width: 40%;
+        margin-right: rem(20);
+    }  
+}
+.CardProductWithQuanlity-img img{
+    width: 100%;
+    border-radius: rem(4);
+}
+.CardProductWithQuanlity-infor{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    @include mq($BREAKPOINT-SM){
+        width: 60%;
+    } 
+}
+.CardProductWithQuanlity-infor-top{
+    width: 100%;
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-grey-15;
+    @include mq($BREAKPOINT-SM){
+        font-size: rem(16);
+        line-height: rem(24);
+    } 
+    @include mq($BREAKPOINT-LG){
+        font-size: rem(20);
+        line-height: rem(27);
+    } 
+
+}
+.CardProductWithQuanlity-infor-top h5{
+    color: $color-black-1;
+}
+.CardProductWithQuanlity-infor-botttom{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: $color-grey-15;
+}
+.CardProductWithQuanlity-infor-botttom label{
+    
+    font-size: rem(12);
+    line-height: rem(20);
+    margin-right: rem(8);
+    @include mq($BREAKPOINT-SM){
+        font-size: rem(16);
+    } 
+    @include mq($BREAKPOINT-LG){
+        font-size: rem(20);
+    } 
+}
+.CardProductWithQuanlity-infor-botttom .quanlity-input{
+    position: relative;
+    overflow: hidden;
+}
+.CardProductWithQuanlity-infor-botttom .quanlity-input input{
+    border: none;
+    outline: none;
+    color: $color-grey-15;
+    padding-left: rem(20);
+    width: fit-content;
+}
+.CardProductWithQuanlity-infor-botttom .quanlity-input span{
+   position: absolute;
+}
+.CardProductWithQuanlity-infor-botttom .quanlity-input span:last-child{
+    left: 40%;
+    bottom: 50%;
+    transform:translateY(45%);
+    @include mq($BREAKPOINT-SM){
+        left: 20%;
+        bottom: 50%;
+        transform:translateY(45%);
+    } 
+ }
+
+.CardProductWithQuanlity-infor-botttom select{
+    border: none;
+    outline: none;
+    border-radius: rem(4);
+    padding: rem(4) rem(8);
+    background-color: $color-grey-14;
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-grey-15;
+}
+ .CardProductWithQuanlity-infor-deleteBtn{
+    position:absolute;
+    right: 2%;
+    top: 4%;
+ }
+ .CardProductWithQuanlity-infor-deleteBtn img{
+    width: rem(10);
+    height: rem(10);
+ }

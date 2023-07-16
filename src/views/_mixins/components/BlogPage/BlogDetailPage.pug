@@ -1,0 +1,74 @@
+mixin BlogDetailPage(Blog,type)
+    <div class="BlogDetailPage-container">
+        <div class="BlogDetailPage-option">
+            if type == "Standard" || type=="Gallery"
+                include ../../../$components/common/SidebarBlog
+        </div>
+        <div class="BlogDetail">
+            <h3 class="BlogDetail-title">!{Blog.title}</h3>
+            <p class="BlogDetail-authorAndDate">by <span>!{Blog.author}</span> - !{Blog.date}</p>
+            <div class="BlogDetail-content">
+                <div class="control-mainImg">
+                    +img(`${Blog.mainImg}`,`${Blog.title}`).BlogDetail-content-mainImg
+                    if type=="Gallery"
+                        include ../../../$components/common/SlideDots
+                </div>
+                <p class="BlogDetail-content-mainContent">!{Blog.content}</p> 
+                +img(`${Blog.subImg}`,`${Blog.title}`).BlogDetail-content-subImg
+                <div class="BlogDetail-content-subContent">
+                    <h5 class="relatedContent-title">Top trends</h5>
+                    <p class="relatedContent-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero.</p>
+                    <ul class="relatedContent-listTopic">
+                        <li>consectetur adipiscing elit. Aliquam placerat </li>
+                        <li>Lorem ipsum dolor sit amet consectetur </li>
+                        <li> sapien tortor faucibus augue</li>
+                        <li>a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="BlogDetail-footer">
+                <div class="BlogDetail-footer-tag">
+                    <span>Tags</span> 
+                    <span  class="BlogDetail-footer-line"></span> 
+                    <span>!{Blog.tags}</span> 
+                </div>
+                <div class="BlogDetail-footer-share">
+                    <span>Share</span> 
+                    <span class="BlogDetail-footer-line"></span> 
+                    <ul >
+                        <li>
+                            <a href="#">
+                            +img('images/Face.png', "FaceBook")
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                            +img('images/Inst.png', "FaceBook")
+                            </a>
+                        </li>
+                        <li class="linkItem">
+                            <a href="#">
+                            +img('images/Twitter.png', "FaceBook")
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="BlogDetail-footer-relyForm">
+                include ../../../$components/Form/RelyForm
+            </div>
+            <div class="BlogDetail-footer-comments">
+                if Blog.comments
+                    <p class="comments-title">
+                        if Blog.comments.length ==1 
+                            <span>Comment(1)</span>
+                        else   
+                            <span>Comments(!{Blog.comments.length})</span>
+                    </p>
+                    <div class="comments-list">
+                        each item in Blog.comments
+                            +CommentCard(item)
+                    </div>
+            </div>
+        </div>
+    </div>

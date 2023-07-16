@@ -1,0 +1,9 @@
+mixin CardProductHorizional(img,name,price,type)
+    <div class="cardProductH">
+        <div class="cardProductH-tag">!{type}</div>
+             +img(`${img}`, `${name}`).cardProductH-img
+        <div class="cardProduct-infor">
+            <p class="cardProduct-infor-name">!{name}</p>
+            <p class="cardProduct-infor-price">$ !{price}</p>
+        </div>
+    </div>

@@ -1,0 +1,14 @@
+@import "_utils/index";
+
+// components
+@import "$components/common";
+@import "$components/header";
+@import "$components/footer";
+@import "$components/CardProduct";
+@import "$components/RatingStar.scss";
+@import "$components/QuantityInput.scss";
+@import "$components/SubmitFormButton.scss";
+@import "$components/ProductDetail/ProductDetail";
+@import "$components/ProductDetail/ProductReview";
+@import "$components/ProductDetail/AlertAdd";
+@import "$components/ProductDetail/PopupImgProduct";

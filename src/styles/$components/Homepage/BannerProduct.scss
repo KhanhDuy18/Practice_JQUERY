@@ -1,0 +1,72 @@
+.bannerProduct{
+    position: relative;
+    color: $color-white-1;
+    font-family: $font-Dmsans;
+    cursor: pointer;
+}
+.bannerProduct-img{
+    width: 100%;
+    object-fit: cover;
+}   
+.bannerProduct-img img{
+    min-width: 100%;
+}
+.bannerProduct-infor{
+    width: 100%;
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: rem(5);
+}
+.bannerProduct-name{
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: rem(26);
+    text-transform: capitalize;
+    @include mq($BREAKPOINT-LG) {
+        font-size: rem(33);
+        line-height: rem(43);
+    }
+}
+.bannerProduct-price,.bannerProduct-button{
+    font-size: rem(12);
+    line-height: rem(20);
+    text-decoration: none;
+    color: $color-white-1;
+    @include mq($BREAKPOINT-LG) {
+        font-size: rem(26);
+        line-height: rem(35); 
+    }
+}
+.bannerProduct-button{
+    width: rem(96);
+    height: rem(32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: rem(1) solid $color-white-1;
+    border-radius: rem(4);
+    @include mq($BREAKPOINT-SM) {
+        margin-top: rem(20);
+    }     
+    @include mq($BREAKPOINT-LG) {
+        margin-top: rem(48);
+        width: rem(193);
+        height: rem(53);
+        font-size: rem(20);
+        line-height: rem(26);
+    }
+}
+.bannerProduct-dots{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: rem(6);
+    padding: 0;
+    margin: 0;
+}

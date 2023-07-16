@@ -1,0 +1,249 @@
+mixin ProductDetail(product,listSimilarItem)
+    <div class="ProductDetail" >
+        <div class="ProductDetail-item"  data-slide>
+            <div class="ProductDetail-item-img"data-slide-container data-slider-slick data-popup >
+                <div class="ProductDetail-item-listImg" data-available-slide-wrapper data-slider-wrapper-small data-default-options-slider='{"infinite": false,"dots": false,"speed": 500,"arrows": false,"slidesToScroll": 1,"slidesToShow": 1}'>
+                    <div data-available-slide-item>
+                        +img(`${product.productImg}`, `${product.productName}`)
+                    </div>
+                    <div data-available-slide-item>
+                        +img(`${product.productImg}`, `${product.productName}`)
+                    </div>
+                    <div data-available-slide-item>
+                        +img(`${product.productImg}`, `${product.productName}`)
+                    </div>
+                    <div data-available-slide-item>
+                        +img(`${product.productImg}`, `${product.productName}`)
+                    </div>
+                    <div data-available-slide-item>
+                        +img(`${product.productImg}`, `${product.productName}`)
+                    </div>
+                </div>
+            </div>
+            <div class="ProductDetail-item-fullInfor">
+                    <div class="ProductDetail-item-infor">
+                        if product.productState 
+                            <h1 class="item-infor-name">!{product.productName}</h1>
+                            <div class="item-infor-price">
+                                <span class="oldPrice" data-format-price>!{product.productPrice}</span>
+                                <span class="newPrice" data-format-price>!{product.productPrice*(1-product.productState)}</span>
+                            </div>
+                            <a href="#" class="shareBtn"> 
+                                +img("images/share.png", "Share")
+                            </a>
+                        else
+                            <h1 class="item-infor-name">!{product.productName}</h1>
+                            <p class="item-infor-price" data-format-price>!{product.productPrice}</p>
+                            <a href="#" class="shareBtn"> 
+                                +img("images/share.png", "Share")
+                            </a>
+                    </div>
+                    <div class="ProductDetail-item-starAndReview">
+                        +RatingStar('4', `review-mainProduct`)
+                        <p class="ProductDetail-productReview">
+                            if product.productReviews
+                                if product.productReviews.length < 1
+                                    <span>!{product.productReviews.length} customer review</span>
+                                else 
+                                    <span>!{product.productReviews.length} customer reviews</span>
+                        </p>
+                    </div>
+                    <div class="ProductDetail-item-btnAdd" data-add-product-to-cart>
+                        +QuantityInput(product)
+                        +SubmitFormButton('ADD TO CART')
+                    </div>
+                    <div class="ProductDetail-item-desc">
+                        <p class="content">!{product.productDesc}</p>
+                        <a href="#">View more 
+                            +img("images/Iconright.png", "Share")
+                        </a>
+                    </div>
+                    <div class="ProductDetail-item-reactAndSocial">
+                        <span class="reactAndSocial-react fa fa-heart-o" data-react-icon></span>
+                        <ul class="reactAndSocial-social">
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/Mail.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/Face.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/IgBig.png", "Mail")
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:someone@example.com">
+                                    +img("images/TwitterBig.png", "Mail")
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="ProductDetail-item-QuantityAndType">
+                        <span>SKU: <span>!{product.Quantity}</span></span>
+                        <span>Categories: <span>!{product.type}</span></span>
+                    </div>
+            </div>
+        </div>
+        <div class='ProductDetail-tab' data-changing-tab>
+            <div class="ProductDetail-moreInfor-mobile" data-mobile-tab-wrapper>
+                <div class="moreInfor-mobile-desc">
+                    <div class="ProductDetail-moreInfor-item" data-mobile-tab-title='desc'>
+                        <h3>Description</h3>
+                        <div class="moreInfor-item-Icon">
+                            +img("images/IconDown.png", "Expand")
+                            +img("images/UpIcon.png", "Expand")
+                        </div>
+                    </div>
+                    <div class="ProductDetail-moreInfor-itemContent" data-mobile-tab-content='desc'>
+                        <p class=" descContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.</p>
+                    </div>
+                </div>
+                <div class="moreInfor-mobile-additional">
+                    <div class="ProductDetail-moreInfor-item" data-mobile-tab-title='additional'>
+                        <h3>Additional information</h3>
+                        <div class="moreInfor-item-Icon">
+                            +img("images/IconDown.png", "Expand")
+                            +img("images/UpIcon.png", "Expand")
+                        </div>
+                    </div>
+                    <div class="ProductDetail-moreInfor-itemContent" data-mobile-tab-content='additional'>
+                        <div class="addContent">
+                            <span>Weight: <span>0.3 kg</span></span>
+                            <span>Dimentions: <span>15 x 10 x 1 cm</span></span>
+                            <span>Colours: <span>Black, Browns, White</span></span>
+                            <span>Material: <span>Metal</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="moreInfor-mobile-review">
+                    <div class="ProductDetail-moreInfor-item" data-mobile-tab-title='review'>
+                        <h3>Reviews(!{product.productReviews.length})</h3>
+                        <div class="moreInfor-item-Icon">
+                            +img("images/IconDown.png", "Expand")
+                            +img("images/UpIcon.png", "Expand")
+                        </div>
+                    </div>
+                    <div class="ProductDetail-moreInfor-itemContent" data-mobile-tab-content='review'>
+                        <div class="review">
+                            <div class="reviewList">
+                                if product.productReviews    
+                                    <p class="reviewList-number">
+                                        if product.productReviews.length < 1
+                                            <span>!{product.productReviews.length} Review for !{product.productName}</span>
+                                        else 
+                                            <span>!{product.productReviews.length} Reviews for !{product.productName}</span>
+                                    </p>
+                                    <div class="reviewList-list">
+                                        each review, index in product.productReviews 
+                                            +ProductReview(review, `review-mobile-${index}`)
+                                    </div>
+                            </div>
+                            <form class="reviewForm">
+                                <p class="reviewForm-title">Add a Review</p>
+                                <p class="reviewForm-notice">Your email address will not be published. Required fields are marked *</p>
+                                <div class="reviewForm-content">
+                                    <label for="content">Your Review*</label>
+                                    <input type="text" id="content">
+                                </div>
+                                <div class="reviewForm-name">
+                                    <input type="text" id="name" placeholder="Enter your name*">
+                                </div>
+                                <div class="reviewForm-email">
+                                    <input type="text" id="email" placeholder="Enter your email*">
+                                </div>
+                                <div class="reviewForm-saving">
+                                    <input type="checkbox" id="savingMobile" name='saving'>
+                                    <label for="savingMobile" >Save my name, email, and website in this browser for the next time I comment</label>
+                                </div>
+                                +RatingStar()
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ProductDetail-moreInfor-desktop" data-desktop-tab-wrapper>
+                <div class="moreInfor-desktop-menu">
+                    <div  class="ProductDetail-moreInfor-item active" data-desktop-tab-title='desc'>
+                        <h3>Description</h3>
+                    </div>
+                    <div  class="ProductDetail-moreInfor-item" data-desktop-tab-title='additional'>
+                        <h3>Additional information</h3>
+                    </div>
+                    <div class="ProductDetail-moreInfor-item " data-desktop-tab-title='review'>
+                        <h3>Reviews(!{product.productReviews.length})</h3>
+                    </div>
+                </div>
+                <div class="moreInfor-desktop-content">
+                    <div class="ProductDetail-moreInfor-itemContent active" data-desktop-tab-content='desc'>
+                        <p class="descContent">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.</p>
+                    </div>
+                    <div class="ProductDetail-moreInfor-itemContent" data-desktop-tab-content='additional'>
+                        <div class="addContent">
+                            <span>Weight: <span>0.3 kg</span></span>
+                            <span>Dimentions: <span>15 x 10 x 1 cm</span></span>
+                            <span>Colours: <span>Black, Browns, White</span></span>
+                            <span>Material: <span>Metal</span></span>
+                        </div>
+                    </div>
+                    <div class="ProductDetail-moreInfor-itemContent" data-desktop-tab-content='review'>
+                        <div class="review">
+                            <div class="reviewList">
+                                if product.productReviews    
+                                    <p class="reviewList-number">
+                                        if product.productReviews.length < 1
+                                            <span>!{product.productReviews.length} Review for !{product.productName}</span>
+                                        else 
+                                            <span>!{product.productReviews.length} Reviews for !{product.productName}</span>
+                                    </p>
+                                    <div class="reviewList-list">
+                                        each review, index in product.productReviews 
+                                            +ProductReview(review,  `review-desktop-${index}`)
+                                    </div>
+                            </div>
+                            <form class="reviewForm">
+                                <p class="reviewForm-title">Add a Review</p>
+                                <p class="reviewForm-notice">Your email address will not be published. Required fields are marked *</p>
+                                <div class="reviewForm-content">
+                                    <label for="content">Your Review*</label>
+                                    <input type="text" id="content">
+                                </div>
+                                <div class="reviewForm-name">
+                                    <input type="text" id="name" placeholder="Enter your name*">
+                                </div>
+                                <div class="reviewForm-email">
+                                    <input type="text" id="email" placeholder="Enter your email*">
+                                </div>
+                                <div class="reviewForm-saving">
+                                    <input type="checkbox" id="savingDesktop" name="saving">
+                                    <label for="savingDesktop">Save my name, email, and website in this browser for the next time I comment</label><br>
+                                </div>
+                                +RatingStar()
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div class="ProductDetail-similarItems">
+            if listSimilarItem
+                <h2 class="similarItems-title">Similar Items</h2>
+                <div class="similarItems-title-list">
+                    each Item in listSimilarItem
+                        +CardProduct(`${listSimilarItem.img}`,`${listSimilarItem.name}`,`${listSimilarItem.price}`)
+                </div>
+            else 
+                <h2 class="similarItems-title">Similar Items</h2>
+                <div class="similarItems-list">
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                    +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 'Sold out'})
+                </div>
+        </div>
+    </div>

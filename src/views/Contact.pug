@@ -1,0 +1,8 @@
+extends _layouts/ContactPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Contact";
+
+block container
+  include $components/UtilsPage/ContactPage

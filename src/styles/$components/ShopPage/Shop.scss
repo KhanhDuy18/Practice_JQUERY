@@ -1,0 +1,220 @@
+.shop {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+  padding: 0 5% rem(70);
+  font-family: $font-Dmsans;
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(30) 7% rem(253);
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(90) 7% rem(253);
+  }
+}
+.shop-title {
+  font-family: $font-Dmsans;
+  font-size: rem(20);
+  line-height: rem(26);
+
+  color: $color-black-1;
+}
+.shop-title h4 {
+  margin: 0;
+}
+.shop-title-Mobile {
+  @include mq($BREAKPOINT-LG) {
+    display: none;
+  }
+}
+.shop-title-Desk {
+  display: none;
+  @include mq($BREAKPOINT-LG) {
+    display: block;
+  }
+}
+.shop-body {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: rem(16) 0;
+  @include mq($BREAKPOINT-LG) {
+    grid-template-columns: 20% auto;
+    gap: 0 2.5%;
+  }
+}
+.shop-filter-Moblile {
+  @include mq($BREAKPOINT-LG) {
+    display: none;
+  }
+}
+.shop-filter-Moblile button {
+  display: flex;
+  align-items: center;
+  gap: rem(10);
+
+  background: none;
+  border: none;
+
+  font-family: $font-Dmsans;
+  color: $color-yellow-8;
+  font-size: rem(12);
+  line-height: rem(20);
+}
+.shop-filter-Desk {
+  display: none;
+  @include mq($BREAKPOINT-LG) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(40);
+  }
+}
+.form-search {
+  position: relative;
+}
+.form-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-bottom: rem(1) solid $color-grey-7;
+
+  padding: rem(11) 0;
+}
+.form-search button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-filter {
+  display: flex;
+  flex-direction: column;
+  gap: rem(45);
+}
+.form-filter-sort {
+  display: flex;
+  flex-direction: column;
+  gap: rem(16);
+}
+.sort-selectContain{ 
+  width: 100%;
+  position: relative;
+}
+.sort-selectContain img{
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.form-filter-sort select {
+  -webkit-appearance: none;
+  width: 100%;
+  padding: rem(15) rem(12);
+  border: rem(1) solid $color-grey-7;
+  border-radius: rem(4);
+
+  font-family: $font-Dmsans;
+  font-size: rem(14);
+  line-height: rem(22);
+  outline: none;
+}
+
+/* IE11 hide native button (thanks Matt!) */
+select::-ms-expand {
+display: none;
+}
+.form-filter-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.form-filter-price input {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  height: rem(1);
+  border-radius: rem(2);
+  background: $color-grey-7;
+  outline: none;
+  margin-bottom: rem(8);
+}
+.form-filter-price input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: rem(14);
+  width: rem(2.5);
+  background: $color-black-1;
+  cursor: pointer;
+}
+.form-filter-price input::-webkit-slider-runnable-track {
+  -webkit-appearance: none;
+  cursor: pointer;
+  color: $color-black-1;
+}
+
+.form-filter-price label{
+  font-family: 'DM Sans';
+  font-size: rem(14);
+  line-height: rem(22);
+  color: $color-grey-15;
+}
+
+.form-filter-price button{
+  background: none;
+  outline: none;
+  border: none;
+
+  font-family: 'DM Sans';
+  font-size: rem(14);
+  line-height: rem(22);
+  color: $color-yellow-8;
+  cursor: pointer;
+}
+.shop-filter-Desk .form-toggle{
+  display: flex;
+  flex-direction: column;
+  font-family: 'DM Sans';
+  font-size: rem(16);
+  line-height: rem(27);
+  color: $color-black-1;
+}
+.shop-filter-Desk .form-filter-toggle button{
+  width: rem(40);
+  height: rem(22);
+  background: $color-grey-15;
+  outline: none;
+  border: none;
+  border-radius: rem(20);
+  display: flex;
+  align-items: center;
+  &:hover{
+    justify-content:flex-end;
+  }
+}
+.shop-filter-Desk .form-filter-toggle button span{
+  display: block;
+  width: rem(16);
+  height: rem(16);
+  background: $color-white-1;
+  border-radius: 50%;
+  
+}
+.form-filter-toggle .filter-toggle-onSale,
+.form-filter-toggle .filter-toggle-inStock{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-filter-toggle .filter-toggle-onSale{
+  margin-bottom: rem(42);
+}
+.shop .shop-listProduct {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: rem(24) rem(16);
+  @include mq($BREAKPOINT-LG) {
+    grid-template-columns: auto auto auto;
+    gap: rem(70) rem(24);
+  }
+}

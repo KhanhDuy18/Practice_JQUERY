@@ -1,0 +1,8 @@
+extends _layouts/LoginPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Account";
+
+block container
+  include $components/UtilsPage/LoginPage

@@ -1,0 +1,12 @@
+mixin BannerProduct(img1,img2,name,price)
+    <div class="bannerProduct">
+        <picture class="bannerProduct-img">
+                source(media="(min-width:540px)" srcset!=img2)
+                +img(`${img1}`, `${name}`)
+        </picture>
+        <div class="bannerProduct-infor">
+            <h3 class="bannerProduct-name">!{name}</h3>
+            <p class="bannerProduct-price" data-format-price>$ !{price}</p>
+            <a class="bannerProduct-button" href="#">View Product</a>
+        </div>
+    </div>

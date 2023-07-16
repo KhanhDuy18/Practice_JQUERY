@@ -1,0 +1,20 @@
+.AccountDetail-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AccountDetail-title{
+    display: none;
+    text-align: center;
+    @include mq($BREAKPOINT-SM){
+        display: block;
+        @include fontSize20();
+        margin-bottom: rem(20);
+    }
+    @include mq($BREAKPOINT-LG){
+        font-size: rem(33);
+        line-height: rem(43);
+        margin-bottom: rem(37);
+    }
+}

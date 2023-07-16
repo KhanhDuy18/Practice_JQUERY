@@ -1,0 +1,19 @@
+.FormButton{
+    border: none;
+  border-radius: rem(4);
+  width: 100%;
+  padding: rem(6) 0;
+  cursor: pointer;
+  @include fontSize12();
+  background-color: $color-black-1;
+  color: $color-white-1;
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+    padding: rem(8) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 700;
+    @include fontSize16();
+    padding: rem(10) 0;
+  }
+}

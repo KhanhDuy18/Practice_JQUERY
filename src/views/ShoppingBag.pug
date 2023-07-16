@@ -1,0 +1,46 @@
+extends _layouts/ShoppingBagLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Shopping Bag";
+
+  -
+    const listProduct = [{
+      img: "images/productSmall1.png",
+      name: "Hal Earrings",
+      price: 25000,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",type:"Fashion, Style",Quantity:"12",
+      reviews: [{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."},{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat."}]
+    },
+    {
+      img: "images/productSmall1.png",
+      name: "Hal Earrings",
+      price: 25000,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",type:"Fashion, Style",Quantity:"12",
+      reviews: [{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."},{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat."}]
+    },
+    {
+      img: "images/productSmall1.png",
+      name: "Hal Earrings",
+      price: 25000,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",type:"Fashion, Style",Quantity:"12",
+      reviews: [{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."},{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat."}]
+    },
+    {
+      img: "images/productSmall1.png",
+      name: "Hal Earrings",
+      price: 25000,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",type:"Fashion, Style",Quantity:"12",
+      reviews: [{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."},{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat."}]
+    },
+    {
+      img: "images/productSmall1.png",
+      name: "Hal Earrings",
+      price: 25000,
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",type:"Fashion, Style",Quantity:"12",
+      reviews: [{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."},{author:"Scarlet withch",date:"6 May, 2020",rating:3,content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat."}]
+    }
+    ];
+
+block container
+  +ShoppingBag(listProduct)

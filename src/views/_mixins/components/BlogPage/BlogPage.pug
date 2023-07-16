@@ -1,0 +1,30 @@
+mixin BlogPage(listBlog)
+    <div class="BlogPage">
+        <h1 class="BlogPage-title">Blog</h1>
+        <div class="BlogPage-categories">
+            <div class="BlogPage-categories-search">
+                <input type="text" placeholder="Search...">
+                +img("images/IconSearchBar.png","Search")
+            </div>
+            <h5 class="BlogPage-categories-title">Categories</h5>
+            <ul class="BlogPage-categories-list">
+                <li><a href="#">Fashion</a><li>
+                <li><a href="#">Style</a><li>
+                <li><a href="#">Accessories</a><li>
+                <li><a href="#">Season</a><li>
+            <ul>
+        </div>
+        <div class="BlogPage-content">
+            <div class='BlogPage-list'>
+                each blog in listBlog
+                    +BlogCard(blog)
+            </div>
+            <div class="BlogPage-pages">
+                <a href="#">1</a>
+                <a href="#">2</a>
+                <a href="#">
+                    +img("images/IconRight.png","Next")
+                </a>
+            </div> 
+        </div>
+</div>

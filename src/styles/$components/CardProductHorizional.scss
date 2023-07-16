@@ -1,0 +1,28 @@
+.cardProductH {
+  position: relative;
+  font-family: $font-Dmsans;
+}
+.cardProductH .cardProductH-tag,
+.cardProductH .cardProduct-infor {
+  position: absolute;
+  left: 2%;
+}
+.cardProductH-img {
+  width: 100%;
+}
+.cardProductH .cardProductH-tag {
+  top: 4%;
+  padding: rem(2) rem(8);
+
+  background: $color-yellow-8;
+  border-radius:rem(4);
+
+  color: $color-white-1;
+  font-size: rem(12);
+  line-height: rem(20);
+  text-align: center;
+}
+.cardProductH .cardProduct-infor{
+  bottom: 4%;
+
+}

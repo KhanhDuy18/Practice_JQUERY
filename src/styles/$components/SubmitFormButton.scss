@@ -1,0 +1,18 @@
+.SubmitFormButton{
+  width: 100%;
+  padding: rem(6) 0;
+  border: rem(1) solid $color-black-1;
+  border-radius: rem(4);
+  font-family: $font-Dmsans;
+  font-size: rem(12);
+  line-height: rem(20);
+  text-decoration: none;
+  color: $color-black-1;
+  background-color: $color-white-1;
+  cursor: pointer;
+  font-weight: 700;
+  @include mq($BREAKPOINT-LG) {
+    width: 60%;
+    padding: rem(6) 0;
+  }
+}

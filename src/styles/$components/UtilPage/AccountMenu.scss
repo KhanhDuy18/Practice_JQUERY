@@ -1,0 +1,54 @@
+.AccountMenu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: rem(39);
+}
+.AccountMenu img {
+  margin-top: rem(8);
+  object-fit: cover;
+  @include mq($BREAKPOINT-SM) {
+    display: none;
+  }
+}
+.AccountMenu .AccountMenu-list .active {
+  color: $color-black-1;
+  border-bottom: rem(1) solid $color-black-1;
+}
+.AccountMenu .AccountMenu-list {
+  width: 90%;
+  overflow-x: auto;
+  display: flex;
+  flex-direction: row;
+  gap: rem(24);
+  border-bottom: rem(1) solid $color-grey-7;
+  @include mq($BREAKPOINT-SM) {
+   width: 100%;
+   gap: rem(30);
+  }
+  @include mq($BREAKPOINT-LG) {
+    gap: rem(49);
+   }
+}
+.AccountMenu .AccountMenu-list::-webkit-scrollbar {
+  display: none;
+}
+.AccountMenu a {
+  width: fit-content;
+  text-decoration: none;
+  @include fontSize16();
+  color: $color-grey-15;
+  padding-bottom: rem(16);
+  &:hover{
+    color: $color-yellow-8;
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize20();
+    padding-bottom: rem(34);
+   }
+}
+.AccountMenu a span:first-child {
+  margin-right: rem(2);
+}

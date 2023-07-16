@@ -1,0 +1,53 @@
+.ProductReview{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    font-family: $font-Dmsans;
+    padding-bottom: rem(10);
+    border-bottom: rem(1) solid $color-grey-7;
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-black-1;
+    @include mq($BREAKPOINT-SM){
+        padding-bottom: rem(20);
+    }
+    @include mq($BREAKPOINT-LG){
+        padding-bottom: rem(40);
+        font-size: rem(16);
+        line-height: rem(26);
+    }
+    
+}
+.ProductReview-author {
+    display: flex;
+    align-items: baseline;
+    gap:rem(8);
+    margin-bottom: rem(8);
+    margin-right: rem(16);
+    font-size: rem(14);
+    line-height: rem(24);
+    @include mq($BREAKPOINT-SM){
+        margin-bottom: rem(16);
+        gap: rem(12);
+    }
+    @include mq($BREAKPOINT-LG){
+        gap:rem(16);
+        font-size: rem(18);
+        line-height: rem(24);
+    }
+    span{
+        color:$color-grey-15;
+    }
+}
+.ProductReview .rating{
+    width: fit-content;
+    margin-bottom: rem(12);
+    @include mq($BREAKPOINT-SM){
+        margin-bottom: rem(18);
+    }
+    @include mq($BREAKPOINT-LG){
+        margin-bottom: rem(24);
+    }
+}
+.ProductReview-content{
+    color:$color-grey-15;
+}

@@ -1,0 +1,52 @@
+mixin ShoppingCart(listProduct)
+    <div class="ShoppingCart" data-product-cart data-product-option='shoppingCart' >
+        <h5 class="ShoppingCart-header">Shopping Cart</h5>
+        <div class="ShoppingCart-body">
+            <div class="ShoppingCart-body-product">
+                <div class="listProduct" data-list-product>
+                </div>
+                <a href="#" class="ShoppingCart-updatecartbtn" data-update-cart>UPDATE CART</a>
+                <div class="couponForm" data-coupon>
+                    <input type="text" placeholder="Coupon Code" data-coupon-input/>
+                    <button data-coupon-button>APPLY COUPON</button>
+                </div>
+            </div>
+            <div  class="ShoppingCart-body-bill">
+                <div class="ShoppingCart-bill">
+                    <h5 class="ShoppingCart-bill-title">Cart totals</h5>
+                    <p class="ShoppingCart-bill-subTotal">
+                        <span>SUBTOTAL</span>
+                        <span data-sub-total-price data-format-price></span>
+                    </p>
+                    <form class="ShoppingCart-bill-shippingForm" data-select-province>
+                        <p class="shippingForm-title">SHIPPING  </p>
+                        <div class="shippingForm-content">
+                            <p class="shippingForm-content-policy">Shipping costs will be calculated once you have provided address.</p>
+                            <div class="shippingForm-content-togle">
+                                <p>Calculate Shipping</p>   
+                                +img("images/IconDown.png",'expend').toggle-expend
+                                +img("images/CollabIcon.png",'collab').toggle-collab
+                            </div>
+                            <select name="city" class="shippingForm-content-selectContry" data-city-select>
+                                <option value="USA">City</option>
+                            </select>
+                            <select name="district" class="shippingForm-content-selectCity" data-district-select>
+                                <option value="USA">District</option>
+                            </select>
+                            <select name="address" class="shippingForm-content-selectCode"  data-commune-select>
+                                <option value="USA">Address</option>
+                            </select>
+                            <button type="submit">UPDATE TOTALS</button>
+                        </div>
+                    </form>
+                    <div class="shippingForm-footer" data-total>
+                        <div class="shippingForm-footer-totalPrice">
+                            <p>TOTAL</p>
+                            <p data-total-price data-format-price></p>
+                        </div>
+                    </div>
+                    <a href="http://localhost:5000/checkoutPAge.html" class="ShoppingCart-bill-link" data-checkout-button>PROCEED TO CHECKOUT</a>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,28 @@
+.AccountDetailForm{
+    display: flex;
+    flex-direction: column;
+    gap: rem(45);
+    width: 100%;
+    @include mq($BREAKPOINT-LG){
+        width: 40%;
+    }
+}
+.AccountDetailForm-inputField input{
+    margin-bottom: rem(48);
+}
+.AccountDetailForm-inputField .AccountDetail-DisplayNameInput{
+    margin-bottom: rem(8);
+}
+.AccountDetailForm-inputField input[type="mail"]{
+    margin-bottom: 0;
+}
+.AccountDetailForm-inputField label{
+    display: block;
+    margin-bottom: rem(48);
+}
+.AccountDetailForm-tag{
+    @include fontSize16();
+    @include mq($BREAKPOINT-SM){
+        font-weight: 700;
+    }
+}

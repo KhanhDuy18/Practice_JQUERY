@@ -1,0 +1,38 @@
+.QuantityInput {
+  display: none;
+  border-radius: rem(4);
+  @include mq($BREAKPOINT-LG) {
+    display: block;
+    position: relative;
+    margin-right: rem(23);
+  }
+}
+.QuantityInput input {
+  width: rem(102);
+  height: rem(53);
+  border: none;
+  outline: none;
+  border-radius: rem(4);
+  background-color: $color-grey-14;
+  text-align: center;
+}
+.QuantityInput input::-webkit-inner-spin-button,
+.QuantityInput input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.QuantityInput span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $color-grey-15;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.QuantityInput span:first-child {
+  left: 15%;
+}
+.QuantityInput span:last-child {
+  right: 15%;
+}

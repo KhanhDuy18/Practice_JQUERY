@@ -1,0 +1,18 @@
+mixin ShoppingBag(listProduct)
+    <div class="ShoppingBag" data-product-cart data-product-option='shoppingBag'>
+        <div class="ShoppingBag-header">
+            +img("/images/backIcon.png","Back")
+            <h5>Shopping bag</h5>
+        </div>
+        <div class="ShoppingBag-body">
+            if listProduct 
+                <span class="numberOfProducts" data-number-of-product></span>
+                <div class="listProduct" data-list-product></div>
+        </div>
+        if listProduct 
+            <div class="ShoppingBag-footer">
+                <span class="totalItems" data-number-of-product></span>
+                <span class="totalPrice" data-total-price></span>
+                <a class="ShoppingBag-btn" href="http://localhost:5000/shoppingCart.html">View Cart</a> 
+            </div>
+    </div>

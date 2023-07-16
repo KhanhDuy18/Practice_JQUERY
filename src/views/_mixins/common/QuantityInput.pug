@@ -1,0 +1,6 @@
+mixin QuantityInput(product)
+  <div class="QuantityInput" data-quantity-button data-product-name=!{product.productName} data-product-img=!{product.productImg} data-product-id=!{product.productId} data-product-price=!{product.productPrice} data-product-quantity=1 data-product-state=!{product.productState}>
+      <span data-quantity-button-decrease> - </span>
+      <input type="text" name='quantity' value="1" min="1"  max=20 data-quantity-button-input>
+      <span data-quantity-button-increase> + </span>
+  </div>

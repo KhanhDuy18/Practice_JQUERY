@@ -1,0 +1,29 @@
+.AccountNoItem {
+  width: 100%;
+  padding: rem(10) rem(16);
+  background-color: $color-grey-14;
+  border-top: rem(2) solid $color-yellow-8;
+  @include fontSize12();
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(15) rem(30);
+    @include fontSize14();
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(20) rem(40);
+    @include fontSize16();
+  }
+}
+.AccountNoItem a {
+  text-transform: uppercase;
+  color: $color-yellow-8;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}

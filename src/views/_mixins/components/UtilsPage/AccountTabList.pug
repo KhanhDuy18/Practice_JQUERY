@@ -1,0 +1,16 @@
+mixin AccountTabList(listItem,type="Order")
+    <div class="AccountTabList" data-order>
+        <div class="AccountTabs">
+            +AccountMenu(type)
+        </div>
+        if listItem
+            <div class="Account-list" data-order-list-item-mobile>
+                //- each item in listItem
+                //-     +AccountInforItem(item,type)
+            </div>
+            <div class="Account-table">
+                +AccountTableItem(listItem,type)
+            </div>
+        else 
+            +AccountNoItem(type)
+    </div>

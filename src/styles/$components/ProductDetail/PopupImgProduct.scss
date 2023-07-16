@@ -1,0 +1,150 @@
+.PopupImgProduct{
+  z-index: 999;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80%;
+  height:70%;
+  padding: rem(10);
+  background-color:$color-white-1;
+  border-radius: rem(8);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 20px 0px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(20);
+  img{
+    cursor: pointer;
+  }
+  @include mq($BREAKPOINT-SM){
+    width: 80%;
+    height:80%;
+  }
+  @include mq($BREAKPOINT-MD){
+    height: fit-content;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+  }
+  @include mq($BREAKPOINT-XL){
+    width: 60%;
+    max-height: rem(600);
+  }
+}
+.PopupImgProduct.active{
+  display: flex;
+}
+.PopupImgProduct,
+.PopupImgProduct-Main{
+  border-radius: rem(8);
+}
+.PopupImgProduct-Main{
+  width: 100%;
+  margin-bottom: 0;
+  .slick-cloned{
+    display: none !important;
+  }
+  .slick-track{
+    width: 500% !important;
+    @include mq($BREAKPOINT-MD){
+      width: 1000% !important;
+    }
+  }
+  .slick-slide{
+    width: 20% !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    @include mq($BREAKPOINT-MD){
+      justify-content: flex-start;
+    }
+  }
+  img{
+    object-fit: cover;
+    @include mq($BREAKPOINT-SM){
+      max-width: rem(350);
+      max-height: rem(350);
+    }
+    @include mq($BREAKPOINT-MD){
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: rem(400);
+      max-height: rem(400);
+    }
+    @include mq($BREAKPOINT-XL){
+      max-width: rem(540);
+      max-height:rem(540);
+    }
+  }
+  @include mq($BREAKPOINT-SM){
+    width: rem(350);
+    min-height: rem(350);
+  }
+  @include mq($BREAKPOINT-MD){
+    display: flex;
+    width: rem(540);
+  }
+}
+.PopupImgProduct-Sub{
+  overflow-y: hidden;
+}
+.PopupImgProduct-Sub-Slider{
+  overflow-y: auto;
+  height: 90%;
+}
+.PopupImgProduct-Sub-Slider .slick-list{
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+.PopupImgProduct-Sub-Slider .slick-track{
+  width: 100% !important;
+  transform: none !important;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: rem(10) 0;
+}
+.PopupImgProduct-Sub-Slider .slick-slide{
+  width: calc(100%/3 - 10px) !important;
+  margin: 0 rem(10) 0 0;
+  @include mq($BREAKPOINT-LG){
+    width: calc(100%/4 - 10px) !important;
+  }
+  img{
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.PopupImgProduct-Sub-Slider .slick-active{
+  border: rem(1) solid $color-yellow-8;
+  border-radius: rem(4);
+}
+.PopupImgProduct-Sub-Slider .slick-cloned{
+  display: none !important;
+}
+.popup-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,.14);
+  z-index: 800;
+  display: none;
+}
+.popup-overlay.active{
+  display: block;
+}
+body:has(.popup-overlay.active) {
+  height: 100vh;
+  overflow: hidden;
+}
+body:has(.PopupImgProduct.active) .popup-overlay{
+  display: block;
+}
+.PopupImgProduct-Sub-productName{
+  margin-bottom: rem(20);
+}

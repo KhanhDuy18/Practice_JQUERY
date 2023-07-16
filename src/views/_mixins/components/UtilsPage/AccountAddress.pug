@@ -1,0 +1,35 @@
+mixin  AccountAddress(type,mode)
+    <div class="AccountAddress">
+        <div class="AccountTabs">
+            +AccountMenu(type)
+        </div>
+        <p class="AccountAddress-desc">The following addresses will be used on the checkout page by default.</p>
+        <div class="AccountAddress-main">
+            if mode == "Form"
+                <div class="billingAddress AccountAddress-Address addForm">
+                    <h5 class="AccountAddress-Address-title">Billing address</h5>
+                    <button class="AccountAddress-Address-button">ADD</button>
+                    <p class="AccountAddress-Address-desc">You have not set up this type of address yet.</p>
+                    include ../../../$components/Form/AddAddressForm
+                </div>
+                <div class="shippingAddress AccountAddress-Address ">
+                    <h5 class="AccountAddress-Address-title">Shipping address</h5>
+                    <button class="AccountAddress-Address-button">ADD</button>
+                    <p class="AccountAddress-Address-desc">You have not set up this type of address yet.</p>
+                    include ../../../$components/Form/AddAddressForm
+                </div>
+            else
+                <div class="billingAddress AccountAddress-Address">
+                    <h5 class="AccountAddress-Address-title">Billing address</h5>
+                    <button class="AccountAddress-Address-button">ADD</button>
+                    <p class="AccountAddress-Address-desc">You have not set up this type of address yet.</p>
+                    include ../../../$components/Form/AddAddressForm
+                </div>
+                <div class="shippingAddress AccountAddress-Address ">
+                    <h5 class="AccountAddress-Address-title">Shipping address</h5>
+                    <button class="AccountAddress-Address-button">ADD</button>
+                    <p class="AccountAddress-Address-desc">You have not set up this type of address yet.</p>
+                    include ../../../$components/Form/AddAddressForm
+                </div>
+        </div>
+    </div>

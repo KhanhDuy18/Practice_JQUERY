@@ -1,0 +1,24 @@
+extends _layouts/PrivacyPolicyPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Privacy Policy";
+
+  -
+    const policy = {
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue. Morbi porta tempor odio, in molestie diam bibendum sed.",
+      subtitles : [
+        {
+          title:"Security",
+          listContent:["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget ."]
+        },
+        {
+          title:"Cookies",
+          listContent:["Duis rutrum dictum libero quis rutrum. Etiam sed neque aliquam, sollicitudin ante a, gravida arcume","Nam fringilla molestie velit, eget pellentesque risus scelerisque"]
+        }
+      ]
+      }
+
+block container
+  +PrivacyPolicyPage(policy)
+

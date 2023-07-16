@@ -1,0 +1,10 @@
+mixin AccountDetail(type)
+    <div class="AccountDetail">
+        <div class="AccountTabs">
+            +AccountMenu(type)
+        </div>
+        <div class="AccountDetail-container">
+            <h1 class="AccountDetail-title">Account details</h1>
+            include ../../../$components/Form/AccountDetailForm
+        </div>
+    </div>

@@ -1,0 +1,75 @@
+<header class="header" data-header-mobile>
+  <div class="header-top">
+        <div class="header-left">
+          <a href="http://localhost:5000/index.html">
+            +img('images/SHOPPE.png', "SHOPPE").header-right-logo
+          </a>
+        </div>
+        <div class="header-right">
+          <ul class="header-right-link">
+            <li class="linkItem active">
+              +link('http://localhost:5000/ShopPage.html', 'Shop')
+            </li>
+            <li class="linkItem">
+              +link('#', 'Blog')
+            </li>
+            <li class="linkItem">
+              +link('#', 'Our Story')
+            </li>
+          </ul>
+          <div class="header-right-line"></div>
+          <ul class="header-right-icon">
+            <li>
+              <a href="#">
+                  +img('images/IconSearchBar.png', "Search Icon")
+              </a>
+            </li>
+            <li class="rightIcon-shoppingCart" data-shopping-cart>
+              <a href='http://localhost:5000/shoppingCart.html'>
+                  +img('images/shoppingCart.png', "Shopping Cart Icon")
+              </a>
+              <span data-shopping-cart-display class="numberItem">0</span>
+            </li>
+            <li>
+              <a href="#">
+                  +img('images/IconUser.png', "User Icon")
+              </a>
+            </li>
+            <li class="header-right-iconToggle">
+              <a href="#" class="ShowIcon">
+                  +img('images/moreBtn.png', "More button Icon")
+              </a>
+              <a href="#" class="show">
+                  +img('images/CancelIcon.svg', "CancelIcon")
+              </a>
+
+            </li>
+          </ul>
+        </div>
+  </div>
+  <div class="header-mobile">
+      <form class="header-search-input">
+          <input  type="text"  placeholder="Search">
+          +img('images/IconSearchNav.png', "Search Icon").header-search-icon
+      </form>
+      <ul class="header-mobile-itemList">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Search</a></li>
+      </ul>
+      <div class="header-mobile-account">
+          <a href="#">
+            +img("images/Account.svg","Account")
+            <span>My account</span>
+          </a>
+            <a href="#">
+            +img("images/Logout.svg","Account")
+            <span>Logout</span>
+          </a>
+      </div>
+  </div>
+</header>

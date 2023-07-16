@@ -1,0 +1,15 @@
+.AccountTabList .Account-list{
+  @include mq($BREAKPOINT-SM){
+    display: none;
+  }
+}
+.AccountTabList .AccountInforItem:last-child{
+  border: none;
+  margin-bottom: 0;
+}
+.AccountTabList .Account-table{
+  display: none;
+  @include mq($BREAKPOINT-SM){
+    display: block;
+  }
+}

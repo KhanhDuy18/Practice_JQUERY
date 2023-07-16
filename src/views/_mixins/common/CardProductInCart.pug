@@ -1,0 +1,26 @@
+mixin CardProductInCart( product)
+    <a href="#" class="CardProductInCart">
+        <div class="CardProductInCart-img">
+            +img(`${product.img}`, `${product.name}`)
+        </div>
+        <div class="CardProductInCart-infor">
+            <div class="CardProductInCart-infor-top">
+                <h5 class="productName">!{product.name}</h5>
+                <p class="productColorAndSize">Black / Medium</p>
+                <p class="productPrice">$ !{product.price}</p>
+            </div>
+            <div class="CardProductInCart-infor-botttom">
+                    <div class="Quantity-input">
+                        <span> - </span>
+                        <input type="number" value="1" min="0">
+                        <span> + </span>
+                    </div>
+                    <select name="Quantity">
+                        <option value="1" selected >1</option>
+                    </select>       
+            </div>
+        </div>
+        <div class="CardProductInCart-infor-deleteBtn">
+                +img("images/cancelIcon.png","Delete")
+        </div>
+    </a>

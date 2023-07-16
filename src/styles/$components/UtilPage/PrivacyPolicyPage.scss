@@ -1,0 +1,60 @@
+.PrivacyPolicyPage-cotainer {
+  padding-top: rem(39);
+  @include fontSize12();
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+    padding-top: rem(96);
+  }
+}
+.PrivacyPolicyPage {
+  @include mq($BREAKPOINT-SM) {
+    width: 60%;
+  }
+  @include mq($BREAKPOINT-LG) {
+    width: 46%;
+  }
+}
+.PrivacyPolicyPage-title {
+  text-align: left;
+  margin-bottom: rem(39);
+  @include mq($BREAKPOINT-SM) {
+    text-align: center;
+  }
+}
+.PrivacyPolicyPage-desc {
+  margin-bottom: rem(22);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(39);
+  }
+}
+.PrivacyPolicyPage-subtitles {
+  display: flex;
+  flex-direction: column;
+  gap: rem(22);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(39);
+  }
+}
+.PrivacyPolicyPage-subtitles .subtitle h5 {
+  @include fontSize16();
+  font-weight: 400;
+  margin-bottom: rem(13);
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize20();
+  }
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(24);
+    font-size: rem(26);
+    line-height: rem(25);
+  }
+}
+.PrivacyPolicyPage-subtitles .subtitle ul {
+  padding: 0 0 0 rem(16);
+  margin: 0 0 0 rem(16);
+}
+.PrivacyPolicyPage-subtitles .subtitle li {
+  list-style-type: disc;
+}

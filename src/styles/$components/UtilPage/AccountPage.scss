@@ -1,0 +1,6 @@
+.Account-container{
+  padding: 0 $padding-SM rem(94);
+  @include mq($BREAKPOINT-LG){
+    padding: 0 $padding-LG rem(194);
+  }
+}

@@ -1,0 +1,24 @@
+mixin CommentCard(Comment)
+    <div class="CommentCard">
+        <a href="#" class="CommentCard-left">
+            +img(`${Comment.user.avt}`,`${Comment.user.name}`)
+        </a>
+            <div class="CommentCard-right">
+            <div class="CommentCard-right-infoUser">
+                <div class="top-user">
+                    <a href="#" class="top-userName">!{Comment.user.name}</a>
+                    <span class="top-userDate">!{Comment.date}</span>
+                </div>
+                <button class="top-button">
+                    +img("images/RelyIcon.png","Rely")
+                    <span>Rely</span>
+                </button>
+            </div>
+            <p class="CommentCard-right-commentContent">!{Comment.content}</p>
+            if Comment.replies
+                <div class="CommentCard-rely">
+                    each comment in Comment.replies
+                        +CommentCard(comment)
+                </div>
+        </div>     
+    </div>

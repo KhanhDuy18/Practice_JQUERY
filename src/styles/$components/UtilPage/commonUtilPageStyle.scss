@@ -1,0 +1,49 @@
+.UtilPage-cotainer {
+  display: flex;
+  justify-content: center;
+  padding: rem(24) 0 rem(90);
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(128) 0 rem(250);
+  }
+}
+.UtilPage-content {
+  width: 100%;
+  padding: 0 $padding-SM 0;
+  @include mq($BREAKPOINT-SM) {
+    width: 50%;
+    padding: 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    width: 37%;
+  }
+}
+.UtilPage-content-title {
+  @include fontSize20();
+  text-align: center;
+  font-weight: 400;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(24);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 500;
+    @include fontSize30();
+  }
+}
+.UtilPage-form-submitBtn {
+  border: none;
+  border-radius: rem(4);
+  width: 100%;
+  padding: rem(6) 0;
+  @include fontSize12();
+  background-color: $color-black-1;
+  color: $color-white-1;
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+    padding: rem(8) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 700;
+    @include fontSize16();
+    padding: rem(10) 0;
+  }
+}

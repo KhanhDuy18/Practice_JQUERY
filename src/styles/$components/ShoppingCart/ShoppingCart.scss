@@ -1,0 +1,319 @@
+//commonsSyle
+.ShoppingCart-updatecartbtn,
+.couponForm button,
+.shippingForm-content button,
+.ShoppingCart-bill-link{
+  width: 100%;
+  padding: rem(6) 0;
+  border-radius: rem(4);
+  font-family: $font-Dmsans;
+  font-size: rem(12);
+  line-height: rem(20);
+  cursor: pointer;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);   
+  }
+}
+//commonStyle
+.ShoppingCart {
+  font-family: $font-Dmsans;
+  
+  padding: 0 5%;
+  margin-bottom: rem(94);
+  @include mq($BREAKPOINT-SM) {
+    padding: 0 7%;
+    margin-top: rem(-90);
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(96) 7% rem(200);
+  }
+}
+.ShoppingCart-header {
+  font-weight: normal;
+  font-size: rem(16);
+  line-height: rem(27);
+  margin-bottom: rem(18);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(24);
+    margin-bottom: rem(24);
+  }
+  @include mq($BREAKPOINT-LG) {
+    text-align: center;
+    font-size: rem(33);
+    line-height: rem(43);
+    margin-bottom: rem(64);
+  }
+}
+.ShoppingCart-body{
+  @include mq($BREAKPOINT-SM) {
+    padding: 0 15%;
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .ShoppingCart-body-product,
+    .ShoppingCart-body-bill{
+      width: 47%;
+    }
+  }
+}
+.ShoppingCart-body-product{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;  
+}
+.ShoppingCart-body-product .listProduct{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:rem(24);
+    @include mq($BREAKPOINT-LG){
+        gap:rem(39);
+    }
+}
+.ShoppingCart-updatecartbtn {
+  display: block;
+  margin: rem(24) 0 rem(39);
+  padding: rem(6) 0;
+  border: rem(1) solid $color-black-1;
+  text-decoration: none;
+  text-align: center;
+  color: $color-black-1;
+  &:hover{
+    color: $color-white-1;
+    background-color: $color-black-1;
+  }
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(12) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    width: 29%;
+    margin: rem(39) 0 rem(64);
+    padding: rem(16) 0;
+  }
+}
+.couponForm{
+  width: 100%;
+  @include mq($BREAKPOINT-LG) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+.couponForm input {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding:  0 0 rem(13) 0;
+  border-bottom: rem(1) solid $color-grey-7;
+  margin-bottom: rem(24);
+  font-family: $font-Dmsans;
+  color: $color-grey-15;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    width:57%;
+    margin-bottom: 0;
+  }
+}
+.couponForm button {
+  border: none;
+  outline: none;
+  background-color: $color-black-1;
+  color: $color-white-1;
+  margin-bottom: rem(39);
+  &:hover{
+    color: $color-black-1;
+    background-color: $color-white-1;
+    border: rem(1) solid $color-black-1;
+  }
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(12) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    width: 29%;
+    padding: rem(16) rem(5);
+    margin-bottom: 0;
+  }
+}
+.ShoppingCart-bill {
+  background-color: $color-grey-14;
+  padding: rem(15) 5.5% rem(71);
+  font-family: $font-Dmsans;
+  border-radius: rem(4);
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(39) 10% rem(48);
+    background-color: $color-white-1
+  }
+}
+.ShoppingCart-bill-title {
+  font-weight: 500;
+  font-size: rem(16);
+  line-height: rem(27);
+  margin-bottom: rem(23);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(20);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(26);
+    margin-bottom: rem(44);
+  }
+}
+.ShoppingCart-bill-subTotal,
+.ShoppingCart-bill-shippingForm {
+  display: flex;
+  font-size: 12px;
+  line-height: 20px;
+  font-family: $font-Dmsans;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+  }
+}
+.ShoppingCart-bill-subTotal {
+  margin-bottom: rem(22);
+}
+.ShoppingCart-bill-subTotal span:first-child,
+.ShoppingCart-bill-shippingForm .shippingForm-title {
+  width: 45%;
+  font-weight: 500;
+}
+.ShoppingCart-bill-subTotal span:last-child {
+  color: $color-grey-15;
+}
+.ShoppingCart-bill-shippingForm {
+  padding-bottom: rem(30);
+  border-bottom: rem(1) solid $color-grey-7;
+  margin-bottom: rem(18);
+  @include mq($BREAKPOINT-LG) {
+    padding-bottom: rem(39);
+    margin-bottom: rem(42);
+  }
+}
+.ShoppingCart-bill-shippingForm .shippingForm-content {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: rem(23);
+}
+.ShoppingCart-bill-shippingForm select{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  padding: rem(5) 0;
+  border-bottom: rem(1) solid $color-grey-7;
+  color: $color-grey-15;
+  font-family: $font-Dmsans;
+  font-size: rem(12);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    padding: rem(13) 0;
+  }
+}
+.shippingForm-content-policy {
+  color: $color-grey-15;
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(16);
+  }
+  
+}
+.shippingForm-content-togle {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.shippingForm-content-togle p {
+  font-size: rem(12);
+  line-height: rem(20);
+  font-weight: 500;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+  }
+}
+.shippingForm-content-togle .toggle-expend {
+  display: none;
+}
+.shippingForm-content button {
+  outline: none;
+  background: $color-white-1;
+  border: rem(1) solid $color-black-1;
+  &:hover{
+    color: $color-white-1;
+    background-color: $color-black-1;
+  }
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(8) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-weight: 700;
+  }
+}
+.shippingForm-footer{
+  display: flex;
+  flex-direction:column-reverse;
+  gap: rem(20);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(45);
+  }
+}
+.shippingForm-footer-discount,
+.shippingForm-footer-totalPrice{
+  display: flex;
+  justify-content: space-between;
+  font-family: $font-Dmsans;
+  font-size: rem(12);
+  line-height: rem(20);
+  color: $color-grey-15;
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    font-weight: 700;
+    color: $color-black-1;
+  }
+}
+.shippingForm-footer-discount{
+  color: $color-black-1;
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    font-weight: 700;
+    color: $color-grey-15;
+  }
+}
+.ShoppingCart-bill-link{
+  display: none;
+  text-decoration: none;
+  text-align: center;
+  color: $color-white-1;
+  background-color: $color-black-1;
+  @include mq($BREAKPOINT-LG) {
+    display: block;
+    padding: rem(16);
+  }
+  &:hover{
+    color: $color-black-1;
+    background-color: $color-white-1;
+    border: rem(1) solid $color-black-1;
+  }
+}

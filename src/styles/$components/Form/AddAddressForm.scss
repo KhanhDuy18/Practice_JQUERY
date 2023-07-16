@@ -1,0 +1,27 @@
+.AddAddressForm input,
+.AddAddressForm select {
+  @include mq($BREAKPOINT-SM) {
+    margin-bottom: rem(39);
+  }
+}
+.AddAddressForm-inputField-fullName{
+  display: flex;
+  justify-content: space-between;
+  input{
+    @include mq($BREAKPOINT-SM) {
+      width: 45%;
+    }
+  }
+}
+.AddAddressForm-inputField-fullName input:last-child {
+  display: none;
+  @include mq($BREAKPOINT-SM) {
+    display: block;
+  }
+}
+.AddAddressForm-inputField input[type="mail"] {
+  margin-bottom: rem(39);
+  @include mq($BREAKPOINT-SM) {
+    margin-bottom: rem(64);
+  }
+}

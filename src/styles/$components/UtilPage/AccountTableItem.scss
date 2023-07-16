@@ -1,0 +1,62 @@
+.AccountTableItem {
+  @include fontSize14();
+  width: 100%;
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+  }
+}
+.AccountTableItem-header {
+  border-bottom: rem(1) solid $color-black-1;
+}
+.AccountTableItem-header,
+.AccountTableItem-content-item {
+  padding: rem(24) 0;
+  display: grid;
+  grid-template-columns: 25% 20% 20% 20% 15%;
+}
+.AccountTableItem-content {
+  display: flex;
+  flex-direction: column;
+}
+.AccountTableItem-content-item {
+  color: $color-grey-15;
+  border-bottom: rem(1) solid $color-grey-7;
+}
+.AccountTableItem-content-item:last-child {
+  padding-bottom: 0;
+  border: none;
+}
+.AccountTableItem-content-item a {
+  text-decoration: none;
+  color: $color-yellow-8;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.multiAction{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  @include mq($BREAKPOINT-SM) {
+    flex-direction: column;
+  }
+  @include mq($BREAKPOINT-LG) {
+    flex-direction: row;
+  }
+  span{
+    display: block;
+    width: 1px;
+    height: rem(12);
+    background-color: $color-yellow-8;
+    margin: 0 rem(4);
+    @include mq($BREAKPOINT-SM) {
+      display: none;
+    }
+    @include mq($BREAKPOINT-LG) {
+      display: block;
+      height: rem(16);
+    }
+  }
+}
+

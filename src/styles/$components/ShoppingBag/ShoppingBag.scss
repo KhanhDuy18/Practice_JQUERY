@@ -1,0 +1,110 @@
+.ShoppingBag{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between;
+
+    font-family: $font-Dmsans; 
+    background-color: $color-white-1;
+
+    @include mq($BREAKPOINT-MD){
+        border-left: rem(1) solid  $color-grey-7;
+        min-width: rem(360);
+        width: 23%;
+    }
+}
+.ShoppingBag-header{
+    padding: rem(16) 0;
+    text-align: center;
+    position: relative;
+    font-size: rem(16);
+    line-height: rem(27);
+    @include mq($BREAKPOINT-SM){
+        font-size: rem(20);
+    }
+    @include mq($BREAKPOINT-LG){
+        padding: rem(66) 10% rem(15);
+        font-size: rem(24);
+        text-align: left;
+    }
+}
+.ShoppingBag-header img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
+    @include mq($BREAKPOINT-MD){
+        display: none;
+    }
+}
+.ShoppingBag-body{
+    padding: 0 rem(16);
+    overflow: hidden;
+    @include mq($BREAKPOINT-SM){
+        padding: 0 20%;
+    }
+    @include mq($BREAKPOINT-MD){
+        padding: 0 10%;
+    }
+}
+.ShoppingBag-body .numberOfProducts{
+    display: block;
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-grey-15;
+    margin-bottom: rem(5);
+}
+.ShoppingBag-body .listProduct{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap:rem(24);
+    height: 90%;
+    overflow-y: auto;
+    @include mq($BREAKPOINT-SM){
+        gap:rem(28);
+    }
+}
+.ShoppingBag-body .listProduct::-webkit-scrollbar{
+    display: none;
+}
+.ShoppingBag-footer{
+    width: 100%;
+    height: rem(125);
+    padding: rem(24) 5%;
+    background-color: $color-white-1;
+    border-top: rem(1) solid $color-grey-7;
+
+    font-size: rem(12);
+    line-height: rem(16);
+    font-weight: 500;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include mq($BREAKPOINT-SM){
+        font-size: rem(16);
+    }  
+}
+.ShoppingBag-footer a{
+    width: 100%;
+    color: $color-black-1;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    padding: rem(8) 0;
+    border: rem(1) solid $color-black-1;
+    border-radius: rem(4);
+    margin-top: rem(16);
+    &:hover{
+        color: $color-yellow-8;
+        border: rem(1) solid $color-yellow-8;
+    }
+}

@@ -1,0 +1,5 @@
+mixin ListProductPicked(listProduct,where)
+    <div class="listProduct">
+        each item in listProduct
+            +CardProductWithQuantity(item,where)
+    </div>

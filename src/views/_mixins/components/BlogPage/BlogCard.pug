@@ -1,0 +1,8 @@
+mixin BlogCard(Blog)
+    <a href="#" class="BlogCard">
+        +img(`${Blog.img}`,`${Blog.title}`).BlogCard-img
+        <p class="BlogCard-date">!{Blog.date}</p>
+        <h5 class="BlogCard-title">!{Blog.title}</h5>
+        <p class="BlogCard-desc">!{Blog.desc}</p>
+        <span class="BlogCard-link">Read More</span> 
+    </a>

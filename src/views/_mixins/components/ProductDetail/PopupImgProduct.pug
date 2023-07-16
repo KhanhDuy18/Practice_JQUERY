@@ -1,0 +1,40 @@
+mixin PopupImgProduct(product)
+    <div class="PopupImgProduct" data-popup data-slider-slick>
+        <div class="PopupImgProduct-Main" data-slider-wrapper-popup> 
+            <div>
+                    +img("/images/imgProductDetail.png", `${product.name}`)
+            </div>
+            <div>
+                    +img("/images/imgProductDetail.png", `${product.name}`)
+            </div>
+            <div>
+                    +img("/images/imgProductDetail.png", `${product.name}`)
+            </div>
+            <div>
+                    +img("/images/imgProductDetail.png", `${product.name}`)
+            </div>
+            <div>
+                    +img("/images/imgProductDetail.png", `${product.name}`)
+            </div>
+        </div>
+        <div class="PopupImgProduct-Sub">
+            <h3 class="PopupImgProduct-Sub-productName">!{product.name}</h3>
+            <div class="PopupImgProduct-Sub-Slider" data-slider-wrapper-small-popup>
+                <div>
+                        +img(`${product.img}`, `${product.name}`)
+                </div>
+                <div>
+                        +img(`${product.img}`, `${product.name}`)
+                </div>
+                <div>
+                        +img(`${product.img}`, `${product.name}`)
+                </div>
+                <div>
+                        +img(`${product.img}`, `${product.name}`)
+                </div>
+                <div>
+                        +img(`${product.img}`, `${product.name}`)
+                </div>
+            </div>
+        </div>
+    </div>

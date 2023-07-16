@@ -1,0 +1,95 @@
+.CheckoutPage {
+  width: 100%;
+  padding: 0 $padding-SM;
+  font-family: $font-Dmsans;
+  margin-bottom: rem(94);
+  font-size: rem(12);
+  line-height: rem(20);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(16); 
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(96) $padding-LG rem(253);
+  }
+}
+.Checkout-title{
+  font-family: $font-Dmsans;
+  margin-bottom: rem(24);
+  font-size: rem(16);
+  line-height: rem(27);
+  font-weight: 500;
+  @include mq($BREAKPOINT-SM) {
+    text-align: center; 
+    font-size: rem(20);
+    margin-bottom: rem(48);
+  }
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(64);
+    font-size: rem(33);
+    line-height: rem(43);
+  }
+}
+.Checkout-link {
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  margin-bottom: rem(38);
+  @include mq($BREAKPOINT-LG) {
+    gap: rem(16);
+    margin-bottom: rem(24);
+  }
+  p {
+    display: block;
+    color: $color-grey-15;
+  }
+  a {
+    color: $color-black-1;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+.couponForm{
+  width: 46%;
+  display: none;
+  padding: rem(24);
+  border: rem(1) solid $color-grey-7;
+  margin-bottom: rem(48);
+  @include mq($BREAKPOINT-LG) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  input{
+    width: 57%;
+    color: $color-grey-15;
+    padding-bottom: rem(24);
+    border: none;
+    border-bottom: rem(1) solid $color-grey-7;
+  }
+  button{
+    cursor: pointer;
+    border: rem(1) solid $color-black-1;;
+    padding: rem(16) rem(24);
+    font-size: rem(16);
+    line-height: rem(20);
+    color: $color-white-1;
+    background-color: $color-black-1;
+    border-radius: rem(4);
+    &:hover{
+      color: $color-black-1;
+      background-color: $color-white-1;
+    }
+  }
+}
+.couponForm  .couponForm-coupon-desc{
+  width: 100%;
+  font-size: rem(16);
+  line-height: rem(27);
+  font-weight: 400;
+  color: $color-grey-15;
+  margin-bottom: rem(39);
+}

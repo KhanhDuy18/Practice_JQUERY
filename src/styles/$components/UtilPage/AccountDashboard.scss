@@ -1,0 +1,45 @@
+.AccountDashboard{
+    @include mq($BREAKPOINT-LG) {
+      padding-top: rem(96);
+      padding-bottom: rem(206);
+    }
+  }
+.AccountDashboard-title {
+  text-align: center;
+  font-weight: 400;
+  @include fontSize20();
+  margin-bottom: rem(24);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(26);
+    line-height: rem(33);
+    margin-bottom: rem(48);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(33);
+    line-height: rem(43);
+    font-weight: 500;
+    margin-bottom: rem(64);
+  }
+}
+.AccountDashboard-content {
+  @include fontSize12();
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+  }
+}
+.AccountDashboard-content p:first-child {
+  margin-bottom: rem(16);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(24);
+  }
+}
+.AccountDashboard-content a {
+text-decoration: none;
+  color: $color-yellow-8;
+  &:hover{
+    color: $color-orange-7;
+  }
+}

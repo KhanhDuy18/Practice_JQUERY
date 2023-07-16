@@ -1,0 +1,24 @@
+mixin CardProductWithQuantity( product)
+    <a href="#" class="CardProductWithQuantity">
+        <div class="CardProductWithQuantity-img">
+            +img(`${product.img}`, `${product.name}`)
+        </div>
+        <div class="CardProductWithQuantity-infor">
+            <div class="CardProductWithQuantity-infor-top">
+                <h5 class="productName">!{product.name}</h5>
+                <p class="productColorAndSize">Black / Medium</p>
+                <p class="productPrice">$ !{product.price}</p>
+            </div>
+            <div class="CardProductWithQuantity-infor-botttom">
+                <label for="Quantity">QTY:</label>
+                <div class="Quantity-input">
+                    <span  class="Quantity-input-reduce">-</span>
+                    <input type="number" value="1" min="0">
+                    <span class="Quantity-input-increase">+</span>
+                </div>
+            </div>
+        </div>
+        <div class="CardProductWithQuantity-infor-deleteBtn">
+                +img("images/cancelIcon.png","Delete")
+        </div>
+    </a>

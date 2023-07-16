@@ -1,0 +1,7 @@
+extends _layouts/ShopPageLayout
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Shop";
+
+block container
+  +Shop()

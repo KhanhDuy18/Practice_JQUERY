@@ -1,0 +1,92 @@
+.HelpPage-container{
+    width: 100%;
+    padding-top: rem(40);
+    margin-bottom: rem(94);
+    display: flex;
+    justify-content: space-between;
+    @include mq($BREAKPOINT-LG) {
+        flex-direction: row;
+        padding: 0 $padding-LG ;
+        margin-bottom: rem(40);
+        align-items: center;
+    }
+}
+.HelpPage-container>img{
+    display: none; 
+    object-fit: cover;
+    @include mq($BREAKPOINT-LG) {
+        width: 50%;
+        display: block;
+    }
+}
+.HelpPage{
+    width: 100%;
+    @include fontSize12();
+    @include mq($BREAKPOINT-LG) {
+        width: 40%;
+        @include fontSize20();
+    }
+}
+.HelpPage-title,
+.HelpPage-button,
+.HelpPage-tab{
+    padding: 0 $padding-SM;
+    @include mq($BREAKPOINT-LG) {
+        padding: 0 $padding-LG;
+    }
+}
+.HelpPage-title{
+    @include fontSize20();
+    margin: 0 0 rem(15) 0;
+    @include mq($BREAKPOINT-LG) {
+        font-size: rem(24);
+    }
+}
+.HelpPage-tabs{
+    margin-bottom: rem(39);
+}
+.HelpPage-tab-title{
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: rem(22) 0;
+    border-top:  rem(1) solid $color-grey-7;
+    @include mq($BREAKPOINT-LG) {
+        font-weight: normal;
+    }
+}
+.HelpPage-tabs .HelpPage-tab:first-child .HelpPage-tab-title{
+    border-top: none;
+}
+.HelpPage-tabs .HelpPage-tab:last-child .HelpPage-tab-title{
+    border-bottom:  rem(1) solid $color-grey-7;
+}
+.HelpPage-tab-title span {
+    display: flex;
+    align-items: center;
+    gap: rem(17);
+}
+.HelpPage-tab-title.active{
+    border-top: none;
+}
+.HelpPage-tab:has(.active){
+    background-color: $color-grey-14;
+}
+.HelpPage-tab:has(.active) ~ .HelpPage-tab>.HelpPage-tab-title{
+    border-top: none;
+}
+.HelpPage-button button{
+    width: 100%;
+    padding: rem(6) 0;
+    outline: none;
+    border-radius: rem(4);
+    border:  rem(1) solid $color-black-1;
+    background-color: $color-white-1;
+    @include fontSize12();
+    @include mq($BREAKPOINT-LG) {
+        padding: rem(10) 0;
+        @include fontSize20();
+    }
+
+}

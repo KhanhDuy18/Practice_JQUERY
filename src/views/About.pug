@@ -1,0 +1,8 @@
+extends _layouts/AboutPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "About";
+  
+block container
+  include $components/UtilsPage/AboutPage

@@ -1,0 +1,11 @@
+mixin Account(listItem,type="Dashboard",mode)
+    <div class="Account-container">
+        if type == "Dashboard"
+            +AccountDashboard()
+        else if type == "Order" || type == "Download"
+            +AccountTabList(listItem,type)
+        else if type =="Address"
+            +AccountAddress(type,mode)
+        else if type == "Detail"
+            +AccountDetail(type)
+    </div>

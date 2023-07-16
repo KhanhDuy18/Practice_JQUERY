@@ -1,0 +1,30 @@
+mixin AccountInforItem(item,type="Order")
+    <div class="AccountInforItem">
+        <div class="AccountInforItem-option">
+            <span class="infor-tag">ORDER NUMBER</span>
+            <span class="infor-value">!{item.id}</span>
+        </div>
+        <div class="AccountInforItem-option">
+            <span class="infor-tag">DATE</span>
+            <span class="infor-value">!{item.date}</span>
+        </div>
+        <div class="AccountInforItem-option">
+            <span class="infor-tag">STATUS</span>
+            <span class="infor-value">!{item.status}</span>
+        </div>
+        <div class="AccountInforItem-option">
+            <span class="infor-tag">TOTAL</span>
+            <span class="infor-value">$ !{item.total}</span>
+        </div>
+        <div class="AccountInforItem-option">
+            <span class="infor-tag">ACTIONS</span>
+            if type == "Download"
+                <span class="multiAction">
+                    <a href="#">View Order</a>
+                    <span></span>
+                    <a href="#">Download</a>
+                </span>
+            else 
+                <a href="#">View Order</a>
+        </div>
+    </div>

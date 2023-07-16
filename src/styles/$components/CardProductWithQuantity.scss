@@ -1,0 +1,84 @@
+.CardProductWithQuantity{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    border-radius: rem(4);
+    text-decoration: none;
+    &:hover{
+        .productName{
+            color: $color-yellow-8;
+        }
+    }
+}
+.CardProductWithQuantity-img{
+    width: rem(130);
+    height: rem(130);
+    margin-right: rem(8);
+    @include mq($BREAKPOINT-SM){
+        margin-right: rem(20);
+    }  
+}
+.CardProductWithQuantity-img img{
+    width: 100%;
+    border-radius: rem(4);
+}
+.CardProductWithQuantity-infor{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.CardProductWithQuantity-infor-top,
+.CardProductWithQuantity-infor-top h5
+,.CardProductWithQuantity-infor-botttom,
+.CardProductWithQuantity-infor-botttom .Quantity-input input{
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-grey-15;
+    @include mq($BREAKPOINT-SM){
+        font-size: rem(14);
+        line-height: rem(22);
+    } 
+}
+.CardProductWithQuantity-infor-top .productName{
+    color: $color-black-1;
+}
+.CardProductWithQuantity-infor-top .productPrice{
+        color: $color-yellow-8;
+}
+.CardProductWithQuantity-infor-botttom{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.CardProductWithQuantity-infor-botttom label{
+    margin-right: rem(8);
+}
+.CardProductWithQuantity-infor-botttom .Quantity-input{
+    width: rem(60);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.CardProductWithQuantity-infor-botttom .Quantity-input input{
+    width: rem(40);
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.CardProductWithQuantity-infor-botttom .Quantity-input input::-webkit-inner-spin-button,
+.CardProductWithQuantity-botttom .Quantity-input input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    appearance: none;
+}
+ .CardProductWithQuantity-infor-deleteBtn{
+    position:absolute;
+    right: 2%;
+    top: 4%;
+ }
+ .CardProductWithQuantity-infor-deleteBtn img{
+    width: rem(10);
+    height: rem(10);
+ }

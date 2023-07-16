@@ -1,0 +1,35 @@
+extends _layouts/AccountPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "ViewOrder";
+  -
+    const order = {
+      id: "1879605573994",
+      user:{
+        email:"Vitathemes@gmail.com",
+        contact:"+44 8749790988",
+        address:"Kristian holst 34 old street W1F 7NU london United Kingdom"
+      },
+      payment: "Mastercard*************7865",
+      orderDate: "October 8,2020",
+      delivery:"Standard delivery",
+      listProduct: [
+        {
+          productName:"Lira Earrings",
+          price:64
+        },
+        {
+          productName:"Lira Earrings",
+          price:64
+        },
+        {
+          productName:"Lira Earrings",
+          price:64
+        }
+      ]
+    };
+block container
+  +ViewOrder(order)
+
+  

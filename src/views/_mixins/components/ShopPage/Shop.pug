@@ -1,0 +1,72 @@
+mixin Shop(listProduct)
+    <div class="shop">
+        <div class="shop-title">
+            <h4 class="shop-title-Mobile">Shop</h4> 
+            <h4 class="shop-title-Desk">Shop The Latest</h4>
+        </div>
+        <div class="shop-body">
+            <div class="shop-filter">
+                <div class="shop-filter-Moblile">
+                    <button>
+                        +img('images/filterIcon.png', "filter")
+                        <span>Filter</span>
+                    </button>
+                </div > 
+                <div class="shop-filter-Desk">
+                    <form class="form-search">
+                            <input type="text" placeholder="Search..." />
+                            <button type="submit">
+                                +img('images/IconSearchBar.png', "searchIcon")
+                            </button>
+                    </form>
+                    <form class="form-filter">
+                        <div class="form-filter-sort">
+                            <div class="sort-selectContain">
+                                <select name="Shop By" id="ShopBy" default="Shop By">
+                                    <option value="" selected="selected">Shop By</option>
+                                    <option value="price">Saab</option>
+                                    <option value="color">Saab</option>
+                                </select>
+                                +img("images/IconDown.png", "Expand")                           
+                            </div>
+                            <div class="sort-selectContain">
+                                <select name="Sort By" id="SortBy">
+                                    <option value="" selected="selected">Sort By</option>
+                                    <option value="price">Saab</option>
+                                    <option value="color">Saab</option>
+                                </select>
+                                +img("images/IconDown.png", "Expand")
+                            </div>
+                        </div>
+                        <div class="form-filter-price">
+                            <input type="range" id="price" name="price" min="40" max="180" value="50" class="priceRange">
+                            <label for="vol">Price: $40 - $180</label>
+                            <button type="submit" >Filter</button>
+                        </div>
+                        <div class="form-filter-toggle">
+                            <div class="filter-toggle-onSale">
+                                <span>On sale</span>
+                                    <button>
+                                    <span></span>
+                                </button>
+                            </div>
+                            <div class="filter-toggle-inStock">
+                                <span>In Stock</span>
+                                <button>
+                                <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>  
+                </div>
+            </div>
+            <div class="shop-listProduct">
+                +CardProduct({'productId': 'id001','productName': 'Product1','productImg': 'images/productSmall2.png', 'productPrice': 20000})
+                +CardProduct({'productId': 'id002','productName': 'Product2','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                +CardProduct({'productId': 'id003','productName': 'Product3','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                +CardProduct({'productId': 'id004','productName': 'Product4','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                +CardProduct({'productId': 'id005','productName': 'Product5','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+                +CardProduct({'productId': 'id006','productName': 'Product6','productImg': 'images/productSmall2.png', 'productPrice': 20000, 'productState': 0.21})
+            </div>
+        </div>
+    </div>

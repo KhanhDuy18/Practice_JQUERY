@@ -1,0 +1,14 @@
+.menuOption{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: rem(10) rem(50);
+    border: rem(1) solid $color-grey-7;
+    border-radius: rem(4);   
+    font-family: $font-Dmsans;  
+}
+.menuOption-content{
+    font-size: rem(12);
+    line-height: rem(20);
+    color: $color-black-1;
+}

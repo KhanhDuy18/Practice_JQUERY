@@ -1,0 +1,42 @@
+.Login{
+  @include mq($BREAKPOINT-LG) {
+    width: 30%;
+  }
+}
+.Login-title {
+  margin-bottom: rem(24); 
+}
+.Login-tab {
+  @include fontSize12();
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: $color-grey-14;
+  padding: rem(2);
+  margin-bottom: rem(87);
+  border-radius: rem(5);
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize20();
+    margin-bottom: rem(126);
+  }
+}
+.Login-tab-signIn,
+.Login-tab-register {
+  text-align: center;
+  width: 50%;
+  padding: rem(4) 0;
+  border-radius: rem(4);
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(8) 0;
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(12) 0;
+  }
+}
+.Login-tab-signIn.active,
+.Login-tab-register.active {
+  background-color: $color-white-1;
+}

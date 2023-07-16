@@ -1,0 +1,39 @@
+.AccountAlert {
+  width: 100%;
+  padding: rem(10) rem(16);
+  background-color: $color-grey-14;
+  border-top: rem(2) solid $color-yellow-8;
+  @include fontSize12();
+  display: flex;
+  flex-direction: column;
+  gap: rem(8);
+  @include mq($BREAKPOINT-SM) {
+    padding: rem(15) rem(30);
+    @include fontSize14();
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @include mq($BREAKPOINT-LG) {
+    padding: rem(20) rem(40);
+    @include fontSize16();
+  }
+}
+.AccountAlert-state {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.AccountAlert-state img {
+  width: rem(16);
+  height: rem(16);
+  margin-right: rem(8);
+  @include mq($BREAKPOINT-LG) {
+    width: rem(20);
+    height: rem(20);
+  }
+}
+.AccountAlert-link {
+  text-decoration: none;
+  color: $color-yellow-8;
+}

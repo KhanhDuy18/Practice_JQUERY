@@ -1,0 +1,58 @@
+extends _layouts/BlogDetailPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "BlogDetail";
+  -
+    const Blog = {
+      title:"Fast Fashion, And Faster Fashion",
+      tags:"Fashion, Style, Season",
+      author:"ANNY JOHNSON",
+      date:"October 8,2020",
+      mainImg:"images/About.png",
+      content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis. Nunc sed porta augue.<br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam placerat, augue a volutpat hendrerit, sapien tortor faucibus augue, a maximus elit ex vitae libero. Sed quis mauris eget arcu facilisis consequat sed eu felis.",
+      subImg:"images/About2.png",
+      user: {
+        avt:"images/userAvt.png",
+        name:"Scarlet withch"
+      },
+      comments:[
+        {
+          user:{
+            name:"Scarlet withch",
+            avt:"images/userAvt.png",
+          },
+          date:"6 May, 2020",
+          content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet.",
+          replies:[
+            {
+              user:{
+                name:"Kate Moss",
+                avt:"images/userAvt2.png",
+              },
+              date:"6 May, 2020",
+              content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."
+            },
+            {
+              user:{
+                name:"Scarlet withch",
+                avt:"images/userAvt.png",
+              },
+              date:"6 May, 2020",
+              content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."
+            }
+          ]
+        },
+        {
+          user:{
+            name:"Kate Moss",
+            avt:"images/userAvt.png",
+          },
+          date:"6 May, 2020",
+          content:"Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet."
+        }
+      ]
+    };
+  
+block container
+    +BlogDetailPage(Blog,"Gallery")

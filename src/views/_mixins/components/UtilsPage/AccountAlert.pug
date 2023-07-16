@@ -1,0 +1,10 @@
+mixin AccountAlert(state, content,type)
+    <div class="AccountAlert">
+        <div class="AccountAlert-state">
+            if state == "Success"
+                +img('images/SuccessIcon.png', 'Success')
+                <span>!{content}</span>    
+        </div>
+        if state == "Success" && type !== "Order"
+            <a href="#" class="AccountAlert-link">VIEW CART</a>
+    </div>

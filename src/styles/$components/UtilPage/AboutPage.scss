@@ -1,0 +1,88 @@
+.AboutPage-cotainer {
+  padding-top: rem(39);
+  @include fontSize12();
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize14();
+  }
+  @include mq($BREAKPOINT-LG) {
+    @include fontSize16();
+    padding-top: rem(96);
+  }
+}
+.AboutPage {
+  @include mq($BREAKPOINT-SM) {
+    width: 60%;
+  }
+  @include mq($BREAKPOINT-LG) {
+    width: 46%;
+  }
+}
+.AboutPage-title {
+  text-align: left;
+  margin-bottom: rem(39);
+  @include mq($BREAKPOINT-SM) {
+    text-align: center;
+    margin-bottom: rem(24);
+  }
+}
+.AboutPage-logan{
+  @include fontSize20();
+  display: none;
+  text-align: center;
+  margin-bottom: rem(46);
+  @include mq($BREAKPOINT-LG) {
+    display: block;
+  }
+}
+.AboutPage-desc {
+  margin-bottom: rem(22);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(39);
+  }
+}
+.AboutPage-subtitles {
+  display: flex;
+  flex-direction: column;
+  gap: rem(22);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(39);
+  }
+}
+.AboutPage-subtitles .subtitle h5 {
+  @include fontSize16();
+  font-weight: 400;
+  margin-bottom: rem(13);
+  @include mq($BREAKPOINT-SM) {
+    @include fontSize20();
+  }
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(24);
+    font-size: rem(26);
+    line-height: rem(25);
+  }
+}
+.AboutPage-subtitles .subtitle img{
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: rem(16);
+  border-radius: rem(8);
+  @include mq($BREAKPOINT-LG) {
+    margin-bottom: rem(48);
+  }
+}
+.AboutPage-subtitles .subtitle p{
+  margin-bottom: rem(16);
+}
+.AboutPage-subtitles .subtitle ul {
+  padding: 0 0 0 rem(16);
+  margin: 0 0 0 rem(16);
+  display: none;
+  @include mq($BREAKPOINT-LG) {
+    display: flex;
+    flex-direction: column;
+    gap: rem(16);
+  }
+}
+.AboutPage-subtitles .subtitle li {
+  list-style-type: disc;
+}

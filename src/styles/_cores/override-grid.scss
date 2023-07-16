@@ -1,0 +1,16 @@
+$grid-breakpoints: (
+  xs: $BREAKPOINT-XS,
+  sm: $BREAKPOINT-SM,
+  md: $BREAKPOINT-MD,
+  lg: $BREAKPOINT-LG,
+  xl: $BREAKPOINT-XL,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 740px,
+  lg: 960px,
+  xl: 1260px,
+);
+
+$grid-gutter-width: rem(10);

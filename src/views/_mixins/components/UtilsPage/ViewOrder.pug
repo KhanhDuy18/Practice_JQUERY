@@ -1,0 +1,72 @@
+mixin ViewOrder(order,status)
+    <div class="ViewOrder-container" data-order-view>
+        if status =="received"
+            +AccountAlert("Success","We’ve received your order","Order")
+        //- <div class="ViewOrder">
+        //-     <div class="ViewOrder-details">
+        //-         <h2 class="ViewOrder-heading">Order Details</h2>
+        //-         <div class ="ViewOrder-details-content">
+        //-             <div class="ViewOrder-details-left">
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">ORDER NUMBER</span>
+        //-                     <span class="item-value">!{order.id}</span>
+        //-                 </div>
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">EMAIL</span>
+        //-                     <span class="item-value">!{order.user.email}</span>
+        //-                 </div>
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">PAYMENT METHOD</span>
+        //-                     <span class="item-value">!{order.user.email}</span>
+        //-                 </div>
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">ORDER DATE</span>
+        //-                     <span class="item-value">!{order.orderDate}</span>
+        //-                 </div>  
+        //-             </div>
+        //-             <div class="ViewOrder-details-right">
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">DELIVERY OPTIONS</span>
+        //-                     <span class="item-value">!{order.delivery}</span>
+        //-                 </div>
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">DELIVERY ADDRESS</span>
+        //-                     <span class="item-value">!{order.user.address}</span>
+        //-                 </div>
+        //-                 <div class="details-Item">
+        //-                     <span class="item-tag">CONTACT NUMBER</span>
+        //-                     <span class="item-value">!{order.user.contact}</span>
+        //-                 </div>
+        //-             </div>
+        //-         </div>
+        //-     </div>
+        //-     <div class="ViewOrder-summary">
+        //-         <h2 class="ViewOrder-heading">ORDER Summary</h2>
+        //-         <div class="ViewOrder-summary-content">
+        //-             <div class="Summary-content-heading">
+        //-                 <span>PRODUCT</span>
+        //-                 <span>TOTAL</span>
+        //-             </div>
+        //-             <ul class="Summary-content-productList">
+        //-                 each item in order.listProduct
+        //-                     <li>
+        //-                         <span>!{item.productName} </span>
+        //-                         <span>$ !{item.price}</span>
+        //-                     </li>
+        //-             </ul>
+        //-             <div class="Summary-content-subTotal">
+        //-                 <span class="content-tag">SUBTOTAL</span>
+        //-                 <span>$85</span>
+        //-             </div>
+        //-             <div class="Summary-content-shippingType">
+        //-                 <span class="content-tag">SHIPPING</span>
+        //-                 <span>Free shipping</span>
+        //-             </div>  
+        //-             <div class="Summary-content-total">
+        //-                 <span class="content-tag">TOTAL</span>
+        //-                 <span>$85</span>
+        //-             </div>
+        //-         </div>
+        //-     </div>
+        //- </div>
+    </div>

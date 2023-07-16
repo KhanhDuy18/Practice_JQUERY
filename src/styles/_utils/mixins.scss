@@ -1,0 +1,107 @@
+@mixin font-face($name, $pathNotIncludeExt, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $name;
+    src: url("#{$pathNotIncludeExt}.otf") format("opentype");
+    font-weight: $weight;
+    font-style: $style;
+    font-display: swap;
+  }
+}
+
+
+@mixin font-smooth {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+@mixin mq($width, $type: min) {
+  @if unitless($width) {
+    $width: $width * 1px
+  }
+
+  @if $type == max {
+    $width: $width - 1px;
+  }
+
+  @media only screen and (#{$type}-width: $width) {
+    @content;
+  }
+}
+
+
+@mixin mq-range($widthMin, $widthMax) {
+  @if unitless($widthMin) {
+    $widthMin: $widthMin * 1px;
+  }
+
+  @if unitless($widthMax) {
+    $widthMax: $widthMax * 1px - 1px;
+  }
+
+  @media only screen and (min-width: $widthMin) and (max-width: $widthMax) {
+    @content;
+  }
+}
+
+@mixin no-touch {
+  html.no-touch & {
+    @content;
+  }
+}
+
+
+@mixin hover($parentSelector: false) {
+  @if $parentSelector {
+    #{$parentSelector}:hover & {
+      @include no-touch {
+        @content;
+      }
+    }
+  } @else {
+    @include no-touch {
+      &:hover {
+        @content;
+      }
+    }
+  }
+}
+
+
+@mixin size($width, $height: $width) {
+  @if unitless($width) {
+    $width: rem($width * 1px)
+  }
+
+  @if unitless($height) {
+    $height: rem($height * 1px)
+  }
+
+  width: $width;
+  height: $height;
+}
+@mixin fontSize12(){
+  font-family: $font-Dmsans;
+  font-size: rem(12);
+  line-height: rem(20);
+}
+@mixin fontSize14(){
+  font-family: $font-Dmsans;
+  font-size: rem(14);
+  line-height: rem(24);
+}
+@mixin fontSize16(){
+  font-family: $font-Dmsans;
+  font-size: rem(16);
+  line-height: rem(27);
+}
+@mixin fontSize20(){
+  font-family: $font-Dmsans;
+  font-size: rem(20);
+  line-height: rem(26);
+}
+@mixin fontSize30(){
+  font-family: $font-Dmsans;
+  font-size: rem(30);
+  line-height: rem(43);
+}

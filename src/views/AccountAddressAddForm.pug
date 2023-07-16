@@ -1,0 +1,9 @@
+extends _layouts/AccountPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "AccountAddress";
+block container
+  +Account({},"Address","Form")
+
+  

@@ -1,0 +1,23 @@
+.BackToTopButton{
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:  $color-grey-3;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10%;
+    right:10% ;
+    transition: all 0.5s ease;
+    visibility: hidden;
+    z-index: 10;
+    &:hover{
+        transform: translateY(rem(-10));
+        background-color: $color-green-6;
+    }
+}
+.BackToTopButton.BttShow{
+    visibility: visible;
+}

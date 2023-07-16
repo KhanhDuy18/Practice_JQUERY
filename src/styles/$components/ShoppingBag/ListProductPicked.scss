@@ -1,0 +1,10 @@
+.listProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:rem(24);
+    @include mq($BREAKPOINT-SM){
+        gap:rem(28);
+    }
+}

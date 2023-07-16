@@ -1,0 +1,51 @@
+mixin CardProduct(product)
+    if product.productState
+        <a href="#" class="cardProduct">
+            if product.productState == "Sold out"
+                <p  class="cardProduct-tag">!{product.productState}</p>
+                <div class="cardProduct-img">
+                    +img(`${product.productImg}`, `${product.productName}`)
+                    <div class='cardProduct-img-mask'></div>
+                    <div class='addToCardForm' data-add-product-to-cart>
+                        +QuantityInput(product)
+                        +SubmitFormButton('ADD TO CART')
+                    </div>
+                </div>
+                <div class="cardProduct-infor">
+                    <p class="cardProduct-infor-name">!{product.productName}</p>
+                    <p class="cardProduct-infor-price" data-format-price>$ !{product.productPrice}</p>
+                </div>
+            else
+                <p  class="cardProduct-tag">  -%!{product.productState*100}</p>         
+                <div class="cardProduct-img">
+                    +img(`${product.productImg}`, `${product.productName}`)
+                    <div class='cardProduct-img-mask'></div>
+                    <div class='addToCardForm' data-add-product-to-cart>
+                        +QuantityInput(product)
+                        +SubmitFormButton('ADD TO CART')
+                    </div>
+                </div>
+                <div class="cardProduct-infor">
+                    <p class="cardProduct-infor-name">!{product.productName}</p>
+                    <div class="cardProduct-infor-price">
+                        <span class="oldPrice" data-format-price>$ !{product.productPrice}</span>
+                        <span class="newPrice" data-format-price>$ !{product.productPrice*(1 - product.productState)}</span>
+                    </div>
+                </div>
+        </a>
+    else
+        <a href="#" class="cardProduct">
+            <div class="cardProduct-img">
+                +img(`${product.productImg}`, `${product.productName}`)
+                <div class='cardProduct-img-mask'></div>
+                <div class='addToCardForm' data-add-product-to-cart>
+                    +QuantityInput(product)
+                    +SubmitFormButton('ADD TO CART')
+                </div>
+            </div>
+            <div class="cardProduct-infor">
+                <p class="cardProduct-infor-name">!{product.productName}</p>
+                <p class="cardProduct-infor-price" data-format-price>$ !{product.productPrice}</p>
+            </div>
+        </a>
+    

@@ -1,0 +1,32 @@
+extends _layouts/BlogPageLayout
+
+
+block append vars
+  - title = $translator.home ? $translator.home.title : "Blog";
+  -
+    const listBlog = [{
+      img: "images/About.png",
+      date:"Fashion - October 8, 2020",
+      title:"Top Trends From Spring",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.faucibus augue, a maximus elit ex vitae"
+    },
+   {
+      img: "images/About.png",
+      date:"Fashion - October 8, 2020",
+      title:"Top Trends From Spring",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae liberoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },{
+      img: "images/About2.png",
+      date:"Fashion - October 8, 2020",
+      title:"Top Trends From Spring",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae liberoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    {
+      img: "images/About2.png",
+      date:"Fashion - October 8, 2020",
+      title:"Top Trends From Spring",
+      desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit.  faucibus augue, a maximus elit ex vitae liberoaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    }];
+  
+block container
+    +BlogPage(listBlog)

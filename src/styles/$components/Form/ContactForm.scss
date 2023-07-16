@@ -1,0 +1,60 @@
+form{
+  margin: 0;
+}
+.ContactForm input,
+.ContactForm select {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: rem(5) 0;
+  border-bottom: rem(1) solid $color-grey-7;
+  margin-bottom: rem(47);
+}
+.ContactForm select {
+  padding-left: rem(-10);
+}
+.ContactForm input::placeholder,
+.ContactForm select,
+.ContactForm-message label {
+  color: $color-grey-15;
+  @include fontSize12();
+  @include mq($BREAKPOINT-SM) {
+    font-size: rem(14);
+  }
+  @include mq($BREAKPOINT-LG) {
+    font-size: rem(16);
+    line-height: rem(27);
+  }
+}
+.ContactForm-firstName {
+  position: relative;
+  margin-bottom: rem(47);
+}
+.ContactForm-firstName input{
+  margin-bottom: 0;
+}
+.ContactForm-firstName img {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  @include mq($BREAKPOINT-LG) {
+    display: none;
+  }
+}
+.ContactForm-message label{
+  display: block;
+  margin-bottom: rem(30);
+}
+.ContactForm-message input{
+  margin-bottom: rem(24);
+}
+.ContactForm-link {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: $color-black-1;
+}
